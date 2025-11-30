@@ -155,11 +155,13 @@ footer {
 }
 
 /* IMAGE STYLES (the children elements) */
-footer div {
+/* support both <div> (original) and <a> (anchor-based navigation) */
+footer a, footer div {
     width: 110%;           
     display: flex;      
     justify-content: center;   
-    align-items: center;    
+    align-items: center;
+    text-decoration: none;    
 }
 footer img {
     width: 35px;           /* Controls the size of the images */
