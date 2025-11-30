@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+  /* colors */
+  --color-header: #000000;
+  --color-body: #fefaf1;
+  --color-primary: #02a97e;
+  --color-secondary: #f26b41; 
+  --border-color: #000000;
+  --color-subtext: #898989;
+
+  
+  /* font-size */
+  --fs-12: 12px;
+  --fs-14: 14px;
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-20: 20px;
+  --fs-24: 24px;
+  --fs-30: 30px;
+  --fs-36: 36px;
+  --fs-48: 48px;
+  --fs-60: 60px;
+  --fs-72: 72px;
+
+  /* font-weight */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+
+  /* font-family */
+  --ff-heading:  'Albert Sans', Helvetica, sans-serif;
+  --ff-body:    'League Spartan', Arial, sans-serif;
+
+  /* horizontal padding */
+  --pad-x-xxsmall: 4px;
+  --pad-x-xsmall: 8px;
+  --pad-x-small: 12px;
+  --pad-x-default: 16px;
+  --pad-x-large: 25px;
+  --pad-x-xlarge: 40px;
+  --pad-x-xxlarge: 64px;
+  
+  /* vertcal padding */
+  --pad-y-xxsmall: 2px;
+  --pad-y-xsmall: 4px;
+  --pad-y-small: 6px;
+  --pad-y-default: 8px;  
+  --pad-y-large: 13px;
+  --pad-y-xlarge: 20px;
+  --pad-y-xxlarge: 32px;
+
+  /* borders */
+  --border-radius: 2px;
+
+  /* margin */
+  --mar-xxsmall: 4px;
+  --mar-xsmall: 7px;
+  --mar-small: 10px;
+  --mar-default: 16px;  
+  --mar-large: 25px;
+  --mar-xlarge: 40px;
+  --mar-xxlarge: 60px;
+  --mar-section-separation-default: 100px;
+  --mar-section-separation-large: 150px;
+
+  /* default html styles*/
+  font-size: var(--fs-14);
+  font-family: var(--ff-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* reset
+
+  A reset is just there to remove all default behavior from all elements.
+  In this case, removing default margin and padding spaces.
+
+  "box-sizing: border-box;" is more interesing 
+  Basically, by default, box-sizing is set to content-box. May be important
+  to know about this.
+
+  It means that if you set a width/height of an element, the dimension of the elements, 
+  its padding dimension, and border dimensions must be enclosed in that width/height. Refer 
+  to mozilla docs :>
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/*  PAGE STYLES  */
+h1, h2, h3, h4, h5, h6, th, td {
+    font-size: var(--fs-14);
+    font-weight: var(--fw-regular);
+    font-family: var(--ff-body);
+}
+
+/* SETUP STYLES */
+html {
+    display: flex;      
+    justify-content: center;   
+    align-items: center;      
+}
+body {
+    min-height: 100vh;        
+    max-height: 100vh;     
+    aspect-ratio: 9 / 19.5;
+    background-color: #000000;
+    position: relative; 
+    margin: 0;          
+    display: flex;     
+    flex-direction: column;
+}
+
+main {
+    max-width: 50vh; 
+    width: 100%;
+    min-height: 100vh;  
+    background-color: var(--color-body);
+    padding-bottom: 60px; 
+    overflow-y: auto; 
+    flex-grow: 1; 
+}
+
+ /* NAVBAR STYLES */
+footer {
+    position: absolute;
+    width: 101%;    
+    bottom: 0;
+    left: -2px; 
+    height: 60px;
+    background-color: var(--color-secondary);
+    z-index: 10;   
+    box-sizing: border-box;
+
+    border: 2px solid black;
+    border-top-left-radius: 15px;  
+    border-top-right-radius: 15px; 
+    display: flex;                   /* 1. Enable Flexbox on the container */
+    align-items: center;             /* 2. Vertically centers items along the cross-axis */
+    justify-content: space-around;   /* 3. Spreads items out horizontally with even space around them */
+    padding: 0 10px;                 /* Optional: Add a little padding so images don't touch the screen edges */
+}
+
+/* IMAGE STYLES (the children elements) */
+footer div {
+    width: 110%;           
+    display: flex;      
+    justify-content: center;   
+    align-items: center;    
+}
+footer img {
+    width: 35px;           /* Controls the size of the images */
+    aspect-ratio: 1/1;    /* Keeps them square */
+    object-fit: contain;  /* Ensures the image content fits nicely within the square */
+}
+
+
+.selected-icon {
+    height: 40px;
+    border-radius: 50px;
+    background-color: var(--color-primary);
+    color: var(--color-body);
+}
+
