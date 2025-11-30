@@ -1,0 +1,92 @@
+[ 
+    {
+        "id": 1,
+        "name": "UPV Elektrons",
+        "tag": "College",
+        "img": "image/4.webp"
+    }, 
+    {
+        "id": 2,
+        "name": "UPV Komsai.Org",
+        "tag": ["Course", "Univ"],
+        "img": "image/4.webp"
+    }, 
+    {
+        "id": 3,
+        "name": "The UP Intermedius",
+        "tag": ["Performing", "Interest", "Univ"],
+        "img": "image/4.webp"
+    }, 
+    {
+        "id": 4,
+        "name": "UPV TableTop Lovers",
+        "tag": ["Univ", "Interest"],
+        "img": "image/4.webp"
+    }, 
+    {
+        "id": 5,
+        "name": "UPV Akeanon",
+        "tag": "Regional",
+        "img": "image/4.webp"
+    }, 
+    {
+        "id": 6,
+        "name": "Campus Bible Fellowship",
+        "tag": ["Performing", "Univ", "Interest"],
+        "img": "image/4.webp"
+    }, 
+    {
+        "id": 7,
+        "name": "UPV Badminton Club",
+        "tag": ["Univ", "Sports", "Interest"],
+        "img": "image/4.webp"
+    }, 
+    {
+        "id": 8,
+        "name": "UPV Volleyball Club",
+        "tag": ["Univ", "Sports", "Interest"],
+        "img": "image/4.webp"
+    }, 
+    {
+        "id": 9,
+        "name": "UPV Statistical Society",
+        "tag": ["Course", "College"],
+        "img": "image/4.webp"
+    }, 
+    {
+        "id": 10,
+        "name": "NASYO ORG",
+        "tag": ["Academic", "Univ"],
+        "img": "image/4.webp"
+    }, 
+    {
+        "id": 11,
+        "name": "UPV Hublag Dance Company",
+        "tag": ["Univ", "Performing", "Interest"],
+        "img": "image/4.webp"
+    }, 
+    {
+        "id": 12,
+        "name": "Pisay Org",
+        "tag": ["Academic", "Univ"],
+        "img": "image/4.webp"
+    }, 
+    {
+        "id": 13,
+        "name": "UP Gaqued 'Y ang mga Palaweño",
+        "tag": "Regional",
+        "img": "image/4.webp"
+    }, 
+    {
+        "id": 14,
+        "name": "Pagbutlak",
+        "tag": ["Univ", "Publications", "Political"],
+        "img": "image/4.webp"
+    },
+    {
+        "id": 15,
+        "name": "Sandigan ng Mag-aaral para sa Sambayanan - UPV",
+        "tag": ["Political", "Publications"],
+        "img": "image/4.webp"
+    }
+]
