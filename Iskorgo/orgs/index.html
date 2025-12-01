@@ -3,14 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <!-- <script src="https://kit.fontawesome.com/4ab18c6505.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Iskorgo</title>
 </head>
 <body>
-    <header>
+    <header class="org-header">
+        <div class="search-bar">
+            <span class="fa fa-search material-icons"></span>
+            <input type="text" placeholder="Search Orgs">
+        </div>
+        <div class="filter-icon">
+            <span class="fa fa-filter material-icons"></span>            
+        </div>
+
+        <ul class="filter-list hidden"> Filter by
+            <li class="filter-item">All</li>
+            <li class="filter-item">University Wide</li>
+            <li class="filter-item">College Wide</li>
+            <li class="filter-item">Course Based</li>
+            <li class="filter-item">Regional Based</li>
+            <li class="filter-item">Interest Based</li>
+            <li class="filter-item">Performance Based</li>
+            <li class="filter-item">Academic Based</li>
+            <li class="filter-item">Political</li>
+            <li class="filter-item">Sports</li>
+            <li class="filter-item">Iloilo Based</li>
+            <li class="filter-item">Miagao Based</li>                
+            <li class="filter-item">Publication</li>
+        </ul>
     </header>
-    <main>
+    <hr>
+    <main class="org-list-container" id="orgs-list">
+        <p>Loading organizations...</p>
     </main>
     <footer>
         <a class="feed" href="../index.html">
@@ -42,5 +68,5 @@
         </a>
     </footer>
 </body>
-<script src="../index.js"></script>
+<script type="module" src="index.js"></script>
 </html>
