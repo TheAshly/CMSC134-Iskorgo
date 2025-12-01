@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&display=swap');
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* * {
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+} */
+
 :root {
   /* colors */
   --color-header: #000000;
@@ -8,6 +18,9 @@
   --color-secondary: #f26b41; 
   --border-color: #000000;
   --color-subtext: #898989;
+  --color-followed: #1F6861;
+  --color-unfollowed: #64BDB4;
+  --color-org-card: #FEF3ED;
 
   
   /* font-size */
@@ -67,7 +80,7 @@
   --mar-section-separation-large: 150px;
 
   /* default html styles*/
-  font-size: var(--fs-14);
+  font-size: var(--fs-16);
   font-family: var(--ff-body);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -102,9 +115,13 @@
 
 /*  PAGE STYLES  */
 h1, h2, h3, h4, h5, h6, th, td {
-    font-size: var(--fs-14);
+    font-size: var(--fs-16);
     font-weight: var(--fw-regular);
     font-family: var(--ff-body);
+}
+
+hr {
+    border: 2px solid var(--color-header);
 }
 
 /* SETUP STYLES */
@@ -113,6 +130,7 @@ html {
     justify-content: center;   
     align-items: center;      
 }
+
 body {
     min-height: 100vh;        
     max-height: 100vh;     
@@ -127,11 +145,91 @@ body {
 main {
     max-width: 50vh; 
     width: 100%;
-    min-height: 100vh;  
+    /*   100vh on Keiths Device */
+    min-height: 80vh;
     background-color: var(--color-body);
     padding-bottom: 60px; 
     overflow-y: auto; 
     flex-grow: 1; 
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+header.org-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 20px var(--pad-x-default);
+    padding-top: 40px; /* Extra padding for top margin/status bar area */
+    background-color: var(--color-body);
+    /* No shadow, only flat background for a clean look */
+}
+
+.filter-list {
+    position: absolute;
+    font-size: var(--fs-24);
+    font-weight: var(--fw-medium);
+    top: 50px;        
+    right: 1.5em;        
+    background-color: var(--color-secondary);
+    padding: 10px var(--pad-x-default);
+    border-radius: 10px;
+    z-index: 999;         
+    display: block;
+    list-style: none;
+}
+
+.filter-item {
+    text-align: right;
+    border-bottom: 2px solid var(--color-header);
+    font-size: var(--fs-14);
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.search-bar {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    background-color: white; /* Dusty background color */
+    border-radius: 30px;
+    padding: 10px 12px;
+    margin-right: var(--pad-x-default);
+    border: 2px solid var(--color-header); /* Black border around search box */
+    height: 45px;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: var(--fs-18);
+    flex-grow: 1;
+    padding: 0 5px;
+    color: var(--color-header);
+    font-family: var(--ff-body);
+}
+
+.search-bar .material-icons {
+    color: var(--color-header); /* Black icon */
+    margin-right: 5px;
+    font-size: 22px;
+}
+
+.filter-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border: 2px solid var(--color-header); /* Black border */
+    border-radius: 50%;
+    background-color: white; /* Creamy background */
+}
+
+.filter-icon .material-icons {
+    color: var(--color-primary); /* Green color for the icon inside the circle */
+    font-size: 30px;
 }
 
  /* NAVBAR STYLES */
@@ -177,3 +275,89 @@ footer img {
     color: var(--color-body);
 }
 
+/* --- ORGANIZATION CARD STYLES --- */
+.org-card {
+    border: 2px solid var(--color-header);
+    border-radius: 15px;
+    background-color: var(--color-org-card);
+    color: var(--color-header);
+        height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 var(--pad-x-default);
+    margin: var(--mar-small) 0;
+
+    width: 100%; 
+    box-sizing: border-box; 
+    background-color: white;    
+
+    border: 2px solid black;
+    border-radius: 15px; 
+    padding: 1em;
+}
+
+.org-logo {
+    display: flex; /* Ensures content is centered if it's an image tag */
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-header);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 15px;
+    background-color: #333; /* Placeholder background color */
+}
+
+.org-info {
+    flex-grow: 1;
+}
+
+.org-name {
+    font-size: var(--fs-18);
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-body);
+    color: var(--color-header);
+    margin-bottom: 5px;
+    display: block; /* Force name to take its own line */
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    color: white;
+}
+
+.org-tag {
+    border-radius: 25px;
+    background-color: var(--color-primary);
+    color: var(--color-tag-text);
+    padding: 4px 12px;
+    font-size: var(--fs-14);
+    font-weight: var(--fw-semi-bold);
+    font-family: var(--ff-body);
+    height: auto;
+    width: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* --- FOLLOW STATUS --- */
+.follow-status {
+    /* Removed global styles for .org-name, .follow-status for clean separation */
+    font-size: var(--fs-18);
+    font-weight: var(--fw-semi-bold);
+    font-family: var(--ff-body);
+    white-space: nowrap; /* Prevents text wrap */
+}
+
+.follow-status.followed {
+    color: var(--color-followed);
+}
+
+.follow-status.not-followed {
+    color: var(--color-unfollowed);
+}
