@@ -4,13 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./styles.css">
+    <script src="https://kit.fontawesome.com/4ab18c6505.js" crossorigin="anonymous"></script>
     <title>Calendar</title>
 </head>
 <body>
     <header>
     </header>
+    
     <main>
+        <div id="calendar">
+            <div id="calendar-header">
+                <i class="fa-solid fa-caret-left"></i>                
+                <h1 class="display-month"></h1>
+                <i class="fa-solid fa-caret-right"></i>         
+            </div>
+            <div id="calendar-body">
+                <div id="calendar-weekdays">
+                    <div class="calendar-weekday">S</div>
+                    <div class="calendar-weekday">M</div>
+                    <div class="calendar-weekday">T</div>
+                    <div class="calendar-weekday">W</div>
+                    <div class="calendar-weekday">Th</div>
+                    <div class="calendar-weekday">F</div>
+                    <div class="calendar-weekday">Sa</div>
+                </div>
+                <div id="calendar-content">
+                </div>
+            </div>
+            <div id="calendar-list" class="hidden">
+                
+            </div>
+        </div>
     </main>
+
     <footer>
         <a class="feed" href="../index.html">
             <img src="../images/feed.png">
