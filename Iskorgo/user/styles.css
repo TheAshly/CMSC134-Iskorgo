@@ -8,6 +8,8 @@
   --color-secondary: #f26b41; 
   --border-color: #000000;
   --color-subtext: #898989;
+  --color-input-field: #FFEFE6;
+  --color-post-field: #FEF3ED;
 
   
   /* font-size */
@@ -128,12 +130,412 @@ main {
     max-width: 50vh; 
     width: 100%;
     min-height: 100vh;  
-    background-color: var(--color-body);
     padding-bottom: 60px; 
     overflow-y: auto; 
     flex-grow: 1; 
+    background-color: var(--color-body);
 }
 
+.login-section-container, 
+.signup-section-container, 
+.new-user-section-container,
+.achievement-section-container {
+    height: calc(100vh - 60px); /* Full viewport height minus navbar height */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: var(--color-primary);
+}
+.login-section, 
+.signup-section,
+.new-user-section,
+.achievement-section {
+    width: 100%;
+    height: 90%;
+    padding: var(--pad-x-xxlarge) var(--pad-x-large);
+    gap: var(--mar-large);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: var(--color-body);
+}
+.login-section .header, 
+.signup-section .header, 
+.achievement-section .header {
+    margin-bottom: var(--mar-large);
+}
+.login-section .header h1, 
+.signup-section .header h1, 
+.achievement-section .header {
+    font-size: var(--fs-36);
+    font-weight: var(--fw-medium);
+}
+.login-section .input-field-group, 
+.signup-section .input-field-group {
+    margin-top: var(--mar-small);
+}
+.login-section .input-field-group input,  
+.signup-section .input-field-group input {
+    width: 100%;
+    padding: var(--pad-y-large) var(--pad-x-small);
+    background-color: var(--color-input-field);
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-16);
+}
+.login-section .button-group, 
+.signup-section .button-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: var(--mar-default);
+}
+.login-section .button-group button, 
+.signup-section .button-group button {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--mar-small);
+    border-radius: 10px;
+}
+
+.login-section .header p {
+    font-size: var(--fs-24);
+    font-weight: var(--fw-medium);
+}
+.login-section .header p a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+.login-section .input-field-group input ::placeholder {
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-16);
+}
+.login-section .remember-me-group {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: var(--mar-small);
+} 
+.login-section .remember-me-group input {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    accent-color: var(--color-primary);
+    margin-right: var(--mar-small);
+    border-radius: 0px;
+    border: solid 1px var(--color-primary);
+    cursor: pointer;
+}
+.login-section .remember-me-group span {
+    color: var(--color-subtext);
+    font-size: var(--fs-16);
+    font-weight: var(--fw-medium);
+}
+.login-section .button-group .facebook-img-container {
+    margin-right: var(--mar-xsmall);
+}
+.login-section .forget-password-group {
+    margin-top: var(--mar-xlarge);    
+}
+.login-section .forget-password-group a {    
+    font-size: var(--fs-18);
+    font-weight: var(--fw-medium);
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.signup-section .footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--mar-large);
+    font-size: var(--fs-18);  
+    font-weight: var(--fw-medium);  
+}
+.signup-section .footer a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+.new-user-section {
+    height: 85%;
+}
+.new-user-section .header {
+    position: relative;
+    top: -105px;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+
+}
+.new-user-section .header .left {
+    width: 105px;
+    height: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    margin-right: var(--mar-large);
+}
+.new-user-section .header .left img{
+    object-fit: cover;
+    border-radius: 50%;
+}
+.new-user-section .header .right {
+    margin-top: var(--mar-default);
+}
+.new-user-section .header .right h1 {
+    font-size: var(--fs-24);
+    font-weight: var(--fw-semi-bold);
+}
+.new-user-section .header .achievement-icons {
+    margin-right: var(--pad-x-small);
+}
+.new-user-section .header .achievement-icons figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: solid 3px black;
+    background-color: var(--color-body);
+}
+.new-user-section .header .achievements {
+    width: 100%;
+    justify-content: left;
+    display: flex;
+    padding: var(--pad-y-small) var(--pad-x-default);
+    border-radius: 10px;
+    margin-top: var(--mar-default);
+    background-color: var(--color-primary);
+    cursor: pointer;
+}
+.new-user-section .header .achievement-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: var(--fs-16);
+}
+.new-user-section .header .achievement-count {
+    font-size: var(--fs-24);
+    font-weight: var(--fw-semi-bold);
+}
+.new-user-section .header .achievement-caret {
+    display: flex;
+    margin-left: var(--mar-xsmall);
+    align-items: center;
+    font-size: var(--fs-36);
+    font-weight: var(--fw-bold);
+}
+.new-user-section .body {
+    position: relative;
+    top: -70px;
+}
+.new-user-section .followed-organizations img {
+    width: 50px;
+    height: 50px;
+    margin: var(--mar-small) var(--mar-xxsmall);
+    border-radius: 50%;       
+}
+.new-user-section .events-attending-section {
+    margin-top: var(--mar-xlarge);
+}
+.new-user-section .organizations-following-section h3,
+.new-user-section .events-attending-section h3 {
+    font-size: var(--fs-24);
+    font-weight: var(--fw-medium);
+}
+.new-user-section .organizations-following-section p, 
+.new-user-section .events-attending-section p {
+    color: var(--color-subtext);
+    font-size: var(--fs-16);
+}
+
+.new-user-section .event-post {
+    width: 250px;
+    background-color: var(--color-post-field);
+    padding: var(--pad-y-large) var(--pad-x-small);
+    border-radius: 10px;
+} 
+.new-user-section .event-post .post-header {
+    display: flex;
+    grid-template-columns: 60px 1fr;
+    column-gap: var(--mar-small);
+    align-items: center;
+}
+.new-user-section .post-header img {
+    border-radius: 50%;
+}
+.new-user-section .post-header .title {
+    font-size: var(--fs-18);
+    font-weight: var(--fw-semi-bold);
+}
+.new-user-section .post-header .subtitle {
+    color: var(--color-subtext);
+    margin: var(--mar-xsmall) 0;
+}
+.new-user-section .post-content {
+    margin-top: var(--mar-default);
+}
+.new-user-section .post-content .event-name {
+    font-weight: var(--fw-bold);
+}
+.new-user-section .post-content .content{
+    margin-top: var(--mar-default);
+}
+.new-user-section .post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--mar-large);
+}
+.new-user-section .post-footer div {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    cursor: pointer;
+} 
+.new-user-section .post-footer img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.achievement-section {
+    padding: var(--pad-x-default);
+}
+.achievement-section .rectangular-rounded-bar {
+    position: relative;
+    width: 200px;
+    height: 6px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 0px auto var(--mar-large); 
+    background-color: var(--color-primary);
+}
+.achievement-section {
+    text-align: center;
+}
+.achievement-section .achievement-row {
+    margin-top: var(--mar-large);
+    margin-bottom: var(--mar-xlarge);
+}
+.achievement-section .achievement-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-top: var(--mar-small);
+    flex-wrap: wrap;
+}
+.achievement-section .achievement-row h3 {
+    font-size: var(--fs-24);
+}
+.achievement-section .achievement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;   
+}
+.achievement-section .locked {
+    opacity: 60%;
+}
+.achievement-section .locked .achievement-img-container{
+    background-color: var(--color-primary);
+}
+.achievement-section .achievement-img-container {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: solid 4px black;
+}
+.achievement-section .achievement figcaption {
+    width: 16ch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.achievement-section .achievement-name {
+    font-size: var(--fs-16);
+    font-weight: var(--fw-semi-bold);
+    margin: var(--mar-xsmall);
+}
+
+
+button, input {
+    cursor: pointer;
+}
+.btn-primary {
+    background-color: var(--color-primary);
+    color: black;
+    font-size: var(--fs-16);
+    font-weight: var(--fw-semi-bold);
+    border: none;
+}
+.btn-secondary {
+    border: solid 3px var(--color-primary);
+    color: black;
+    font-size: var(--fs-16);
+    font-weight: var(--fw-semi-bold);
+}
+
+.options {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    top: 16px;
+    right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: solid 3px black;
+    cursor: pointer;
+}
+.options-dropdown {
+    width: 160px;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    z-index: 100;
+    padding: var(--pad-y-default) var(--pad-x-default);
+    border-radius: 10px;
+    background-color: var(--color-primary);
+    font-size: var(--fs-18);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.14);
+}
+
+.options-dropdown .label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--mar-xsmall);
+}
+.options-dropdown .label-img {
+    margin-left: var(--mar-xsmall);
+}
+    .options-dropdown .dropdown {
+        text-align: right;
+        padding: var(--pad-y-default) var(--pad-x-default);
+        border-bottom: solid 2px black;
+        font-size: var(--fs-16);
+        cursor: pointer;
+    }
+    .options-dropdown .dropdown:last-child {
+        border: none;
+    }
  /* NAVBAR STYLES */
 footer {
     position: absolute;
@@ -168,7 +570,6 @@ footer img {
     aspect-ratio: 1/1;    /* Keeps them square */
     object-fit: contain;  /* Ensures the image content fits nicely within the square */
 }
-
 
 .selected-icon {
     height: 40px;

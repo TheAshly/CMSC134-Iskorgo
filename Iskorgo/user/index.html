@@ -3,13 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
     <title>Iskorgo</title>
 </head>
 <body>
     <header></header>   <!-- Header Components (Components found at the top of the Phone) -->
     
-    <main></main>       <!-- Main Components (The actual content) -->
+    <main>
+        <!--- There are sections here which can be hidden or not depending on the state-->
+
+        <section class="login-section-container hidden">
+            <div class="login-section">
+                <div class="header">
+                    <h1>Log in</h1>
+                    <p>or <a class="to-signup-anchor" href="#">create an account here</a></p>
+                </div>
+                <form>
+                    <div class="input-field-group">
+                        <input type="text" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-field-group">
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="remember-me-group">
+                        <input type="checkbox" id="remember-me" name="remember-me">
+                        <span>Remember Me</span>                    
+                    </div>
+                    <div class="button-group">
+                        <button type="submit" class="btn-primary">Log In</button>
+                        <button type="login-using-fb" class="btn-secondary"><span class="facebook-img-container"><img src="./../images/facebook.png" width="25" height="25"></span>Log in with Facebook</button>
+                    </div>
+                    
+                    <div class="forget-password-group">
+                        <a href="#">Forgot Password?</a>
+                    </div>    
+                </form>
+            </div>
+        </section>
+
+        <section class="signup-section-container hidden">   
+            <div class="signup-section">
+                <div class="header">
+                    <h1>Sign Up</h1>
+                </div>
+                <form>
+                    <div class="input-field-group">
+                        <input type="text" id="username" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="input-field-group">
+                        <input type="text" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-field-group">
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="input-field-group">
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+                    </div>
+                    <div class="button-group">
+                        <button type="submit" class="btn-primary">Log In</button>
+                    </div>
+                    <div class="footer">
+                        <p>Already have an account?</p>
+                        <a class="to-login-anchor" href="#">Log in here </a>
+                    </div>  
+                </form>
+            </div>
+        </section>
+
+        <section class="new-user-section-container">
+            <div class="options">
+                <img width="32" height="32" src="./../images/settings.png">
+            </div>
+            <div class="options-dropdown">
+                <div class="label"> 
+                    Options <img class="label-img" width="24" height="24" src="./../images/settings.png">
+                </div>
+                <div class="dropdown">Edit User Info</div>
+                <div class="dropdown">Dark Mode</div>
+                <div class="dropdown">Language</div>
+                <div class="dropdown">About</div>
+                <div class="dropdown">Log Out</div>
+            </div>
+
+            <div class="new-user-section">
+                <div class="header">
+                    <div class="left">
+                        <img class="default-pfp hidden" width="100" height="100" src="../images/default-profile.png">
+                        <img class="user-added-pfp " width="100" height="100" src="../images/nina.jpg">
+                    </div>
+                    <div class="right">
+                        <h1>Nina Del Rosario</h1>
+                        <div class="achievements">
+                            <div class="achievement-icons">
+                                <figure>
+                                    <img width="30" height="30" src="./../images/iskorgo.png">
+                                </figure>
+                            </div>
+                            <div class="achievement-body">
+                                <div class="achievement-count">1</div>
+                                <div>Achievement</div>
+                            </div>
+                            <div class="achievement-caret">›</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="body">
+                    <div class="organizations-following-section">
+                        <h3>Organizations Following</h3>
+                        <p class="no-follows hidden">Currently no organizations following.</p>
+                        <div class="followed-organizations">
+                            <img src="./../images/elektrons-logo.jpg">
+                            <img src="./../images/komsai-logo.jpg">
+                            <img src="./../images/up-gaqued.png">
+                            <img src="./../images/ttl-logo.jpg">
+                        </div>
+                    </div>
+                    <div class="events-attending-section">
+                        <h3>Events Attending</h3>
+                        <p class="no-events hidden">Currently no events attending.</p>
+                        <div class="event-post">
+                            <div class="post-header">
+                                <img width="50" height="50" src="./../images/stat-soc-logo.jpg">
+                                <div class="header-info">
+                                    <div class="title">UPV Statistical Society</div>
+                                    <div class="subtitle">October 14, at 8:40 PM</div>                            
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-info">
+                                    <div class="event-name">Statistics Quiz Bee</div>
+                                    <div>October 23, 2025</div>
+                                    <div>CFOS AV Hall</div>
+                                </div>
+                                <div class="content">
+                                    Ready, Set, Stat! 📈🧠 Calling all number nerds, data enthusiasts, and quiz bee champs.. read more
+                                </div>
+                            </div> 
+                            <div class="post-footer">
+                                <div><img width="24px" height="24px" src="./../images/delete.png"></div>
+                                <div><img width="24px" height="24px" src="./../images/notif.png"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="achievement-section-container hidden">
+            <div class="options">
+                <img width="32" height="32" src="./../images/settings.png">
+            </div>
+            <div class="achievement-section">
+                <div class="rectangular-rounded-bar"></div>
+                <h3 class="header">Achievements</h3>
+                <div class="body">
+                    <div class="achievement-row">
+                        <h3>Getting Started</h3>
+                        <div class="achievement-list">
+                            <figure class="achievement">
+                                <div class="achievement-img-container">
+                                    <img width="60" height="60" src="./../images/iskorgo.png">
+                                </div>    
+                                <figcaption>
+                                    <div class="achievement-name">Successfully Signed Up</div>
+                                    <div class="achievement-date-done">17/10/2025</div>
+                                </figcaption>
+                            </figure>
+                            <figure class="achievement locked">
+                                <div class="achievement-img-container">
+                               </div>    
+                                <figcaption>
+                                    <div class="achievement-name">Achievement Locked</div>
+                                    <div class="achievement-date-done"></div>
+                                </figcaption>    
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="achievement-row">
+                        <h3>Label 2</h3>
+                        <div class="achievement-list">
+                            <figure class="achievement locked">
+                                <div class="achievement-img-container"></div>    
+                                <figcaption>
+                                    <div class="achievement-name">Achievement Locked</div>
+                                    <div class="achievement-date-done locked"></div>
+                                </figcaption>
+                            </figure>
+                            <figure class="achievement locked">
+                                <div class="achievement-img-container"></div>    
+                                <figcaption>
+                                    <div class="achievement-name">Achievement Locked</div>
+                                    <div class="achievement-date-done"></div>
+                                </figcaption>    
+                            </figure>
+                            <figure class="achievement locked">
+                                <div class="achievement-img-container"></div>    
+                                <figcaption>
+                                    <div class="achievement-name">Achievement Locked</div>
+                                    <div class="achievement-date-done"></div>
+                                </figcaption>    
+                            </figure>
+                            <figure class="achievement locked">
+                                <div class="achievement-img-container"></div>    
+                                <figcaption>
+                                    <div class="achievement-name">Achievement Locked</div>
+                                    <div class="achievement-date-done"></div>
+                                </figcaption>    
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>       <!-- Main Components (The actual content) -->
 
     <footer>
         <a class="feed" href="../index.html">
@@ -41,5 +247,5 @@
         </a>
     </footer>
 </body>
-<script src="../index.js"></script>
+<script src="./index.js"></script>
 </html>
