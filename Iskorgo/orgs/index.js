@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // 1. Logo
         const logo = document.createElement('img');
         logo.classList.add('org-logo');
-        logo.src = org.img; // Use the image path from JSON
+        logo.src = "." + org.img; // Use the image path from JSON
         logo.alt = `${org.name} logo`;
         card.appendChild(logo);
 

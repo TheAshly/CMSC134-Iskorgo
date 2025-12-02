@@ -3,13 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css">\
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Iskorgo</title>
 </head>
 <body>
-    <header></header>   <!-- Header Components (Components found at the top of the Phone) -->
-    
-    <main></main>       <!-- Main Components (The actual content) -->
+    <header>
+        <div class = "filter-container">
+            <div class="search-bar-container">
+                <span class="fa fa-search material-icons"></span>
+                <input class = "search-bar" searchtype="text" placeholder="Search Orgs">
+            </div>
+            <div class="filter-icon">
+                <span class="material-icons"></span>
+            </div>
+        </div>
+        <div class="feed-state">
+            <span class = "reccomended-feed selected">For You</span>
+            <span class = "following-feed">Following</span>
+        </div>
+    </header>   <!-- Header Components (Components found at the top of the Phone) -->
+    <div class = "dark-overlay">
+        <section class="modal">
+                <hgroup class="modal-header">
+                    <div>
+                        <h1><a href="">Sign Up Now</a></h1>
+                        <h3>or <a href="#">Log in</a></h3>
+                    </div>
+                    <span class = "close-modal">Close Window</span>
+                </hgroup>
+                <div class="modal-body">
+                    To have access to features such as <span class="following">following</span> organizations, and to <span class="following">pin events</span> <img width="20" src="images/clip.png"> and be be keep <span class="following">notified</span> <img width="20" src="images/notif.png"> when they are upcoming.
+                </div>
+        </section> 
+    </div>
+    <main class = "main-container">
+    </main>       <!-- Main Components (The actual content) -->
 
     <footer>
         <a class="feed selected" href="./index.html">

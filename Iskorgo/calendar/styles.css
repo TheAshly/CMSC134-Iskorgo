@@ -277,7 +277,15 @@ main {
     padding: var(--pad-y-large) 0;
     background-color: var(--color-body);
     box-sizing: border-box;
+    
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
 }
+
+#calendar-list::-webkit-scrollbar {
+    display: none; /
+}
+
 #calendar-list .day-item {
     position: relative;
     padding: var(--pad-y-xlarge) var(--pad-x-default);

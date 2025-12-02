@@ -12,7 +12,7 @@
             "chinitong 😫 adviser 🧑🏻‍🏫 ng komsai dot org ! 👾"
         ],
         "postssrc": [
-            "../images/Orgs/UPV Komsai.Org/1.jpg"
+            "./images/Orgs/UPV Komsai.Org/1.jpg"
         ]
     }, 
     {
@@ -28,7 +28,7 @@
             "🗣️ SPEAKER: Pastor Jay Ben Madamay",
             "📆 DATE: October 14 (Tuesday), 5:30 - 8:00 PM ",
             "📍 VENUE: AV 104, CFOS, UPV Miagao",
-            "\"𝐴𝑛𝑑 𝑦𝑜𝑢 𝑎𝑙𝑠𝑜 𝑤𝑒𝑟𝑒 𝑖𝑛𝑐𝑙𝑢𝑑𝑒𝑑 𝑖𝑛 𝐶ℎ𝑟𝑖𝑠𝑡 𝑤ℎ𝑒𝑛 𝑦𝑜𝑢 ℎ𝑒𝑎𝑟𝑑 𝑡ℎ𝑒 𝑚𝑒𝑠𝑠𝑎𝑔𝑒 𝑜𝑓 𝑡𝑟𝑢𝑡ℎ, 𝑡ℎ𝑒 𝑔𝑜𝑠𝑝𝑒𝑙 𝑜𝑓 𝑦𝑜𝑢𝑟 𝑠𝑎𝑙𝑣𝑎𝑡𝑖𝑜𝑛...\"",
+            "\"𝐴𝑛𝑑 𝑦𝑜𝑢 𝑎𝑙𝑠𝑜 𝑤𝑒𝑟𝑒 𝑖𝑛𝑐𝑙𝑢𝑑𝑒𝑑 𝑖𝑛 𝐶ℎ𝑟𝑖𝑠𝑡 𝑤ℎ𝑒𝑛 𝑦𝑜𝑢 ℎ𝑒𝑎𝑟𝑑 𝑡ℎ𝑒 𝑚𝑒𝑠𝑠𝑎𝑔𝑒 𝑜𝑓 𝑡𝑟𝑢𝑡ℎ, 𝑡ℎ𝑒 𝑔𝑜𝑠𝑝𝑒𝑙 𝑜𝑓 𝑦𝑜𝑢𝑟 𝑠𝑎𝑙𝑣𝑎𝑡𝑖𝑜𝑛..\"",
             "𝐄𝐩𝐡𝐞𝐬𝐢𝐚𝐧𝐬 𝟏:𝟏𝟑",
             "Be moved, transformed, and renewed.",
             "See you there!👋",
@@ -36,7 +36,7 @@
             "#CBFUPVBigGroupFellowship"
         ],
         "postssrc": [
-            "../images/Orgs/CBF/1.jpg"
+            "./images/Orgs/CBF/1.jpg"
         ]
     }, 
     {
@@ -58,9 +58,9 @@
             "🖼️ and ✍️ by: Daniella Dimanalata"
         ],
         "postssrc": [
-            "../images/Orgs/Palawan/1.jpg",
-            "../images/Orgs/Palawan/2.jpg",
-            "../images/Orgs/Palawan/3.jpg"
+            "./images/Orgs/Palawan/1.jpg",
+            "./images/Orgs/Palawan/2.jpg",
+            "./images/Orgs/Palawan/3.jpg"
         ]
     }, 
     {
@@ -84,7 +84,7 @@
             "See you tabletoppers!"
         ],
         "postssrc": [
-            "../images/Orgs/TTL/1.jpg"
+            "./images/Orgs/TTL/1.jpg"
         ]
     }, 
     {
@@ -99,13 +99,13 @@
             "#upvvc #upvvolleyballclub #upvvolleyball #UPVOrgFair #PAGHILIUSA #OrgFair2025 #UPV #UniversityOfThePhilippinesVisayas #Volleyball"
         ],
         "postssrc": [
-            "../images/Orgs/Volleyball/default.jpg"
+            "./images/Orgs/Volleyball/default.jpg"
         ]
     }, 
     {
         "id": 6,
         "type": "event",
-        "source_org": 6,
+        "source_org": 1,
         "date": "October 13 at 2:55 PM",
         "description": [
             "📣 𝐃𝐀𝐋𝐈 𝐍𝐀! 𝐌𝐀𝐌𝐈𝐄𝐒𝐓𝐀 𝐓𝐀! 🎊",
@@ -121,8 +121,8 @@
             "Pubmat: Phoebe Viviane Llanera"
         ],
         "postssrc": [
-            "../images/Orgs/Elek/1.jpg",
-            "../images/Orgs/Elek/2.jpg"
+            "./images/Orgs/Elek/1.jpg",
+            "./images/Orgs/Elek/2.jpg"
         ]
     }
 ]
