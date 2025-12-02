@@ -11,7 +11,9 @@
             "✨🎉 happy birthday sa hindi lang may dating, pati na rin sa pinakapoging 😳",
             "chinitong 😫 adviser 🧑🏻‍🏫 ng komsai dot org ! 👾"
         ],
-        "img_src": "https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/561103228_1267780242030410_3312265375709766274_n.jpg?_nc_cat=103&_nc_cb=99be929b-f3b7c874&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFoqX3m8FWLrq3Bh_ozBEEDcu2yb-aeUmZy7bJv5p5SZov-s4l0s0whKPgw598QZDWpTGJt_tH98BhuhH-T6fCa&_nc_ohc=fuouE2gI2VwQ7kNvwE4SkY9&_nc_oc=AdkJE6PIZRHd6iIimqMQX4nN_Em8TchjXJYuKaK9YgJTiCegLo9xK4WrvkZ4KIIyqPE&_nc_zt=23&_nc_ht=scontent-lax3-2.xx&_nc_gid=UfxNHHv-9m37cXUMFAMnkA&oh=00_AfhYeXLX329c9qyV_7AbEr9FGiCfJpXLF2W4q_7C3ktduQ&oe=69322907"
+        "postssrc": [
+            "../images/Orgs/UPV Komsai.Org/1.jpg"
+        ]
     }, 
     {
         "id": 2,
@@ -33,7 +35,9 @@
             "#CBFUPV2025",
             "#CBFUPVBigGroupFellowship"
         ],
-        "img_src": ""
+        "postssrc": [
+            "../images/Orgs/CBF/1.jpg"
+        ]
     }, 
     {
         "id": 3,
@@ -53,7 +57,11 @@
             "’Til the next org fair! 💚💫",
             "🖼️ and ✍️ by: Daniella Dimanalata"
         ],
-        "img_src": []
+        "postssrc": [
+            "../images/Orgs/Palawan/1.jpg",
+            "../images/Orgs/Palawan/2.jpg",
+            "../images/Orgs/Palawan/3.jpg"
+        ]
     }, 
     {
         "id": 4,
@@ -75,7 +83,9 @@
             "https://forms.gle/rh6RMsw1aa5Pu8zZ8",
             "See you tabletoppers!"
         ],
-        "img_src": ""
+        "postssrc": [
+            "../images/Orgs/TTL/1.jpg"
+        ]
     }, 
     {
         "id": 5,
@@ -88,7 +98,9 @@
             "All volleyball enthusiasts are welcome! See YOU there! 🙌🏼",
             "#upvvc #upvvolleyballclub #upvvolleyball #UPVOrgFair #PAGHILIUSA #OrgFair2025 #UPV #UniversityOfThePhilippinesVisayas #Volleyball"
         ],
-        "img_src": ""
+        "postssrc": [
+            "../images/Orgs/Volleyball/default.jpg"
+        ]
     }, 
     {
         "id": 6,
@@ -108,6 +120,9 @@
             "Caption: Loven Grace Sorilla",
             "Pubmat: Phoebe Viviane Llanera"
         ],
-        "img_src": []
+        "postssrc": [
+            "../images/Orgs/Elek/1.jpg",
+            "../images/Orgs/Elek/2.jpg"
+        ]
     }
 ]

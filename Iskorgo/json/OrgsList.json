@@ -3,118 +3,90 @@
         "id": 1,
         "name": "UPV Elektrons",
         "tag": "College",
-        "img": "../images/OrgLogo/UPV Elektrons.jpg",
-        "postssrc": [
-            "../images/Orgs/Elek/1.jpg",
-            "../images/Orgs/Elek/2.jpg"
-        ]
+        "img": "../images/OrgLogo/UPV Elektrons.jpg"
     }, 
     {
         "id": 2,
         "name": "UPV Komsai.Org",
         "tag": ["Course", "Univ"],
-        "img": "../images/OrgLogo/UPV Komsai.Org.jpg",
-        "postssrc": [
-            "../images/Orgs/UPV Komsai.Org/1.jpg",
-        ]
+        "img": "../images/OrgLogo/UPV Komsai.Org.jpg"
     }, 
     {
         "id": 3,
         "name": "The UP Intermedius",
         "tag": ["Performing", "Interest", "Univ"],
-        "img": "../images/OrgLogo/The UP Intermedius.jpg",
-        "postssrc": []
+        "img": "../images/OrgLogo/The UP Intermedius.jpg"        
     }, 
     {
         "id": 4,
         "name": "UPV TableTop Lovers",
         "tag": ["Univ", "Interest"],
-        "img": "../images/OrgLogo/UPV TableTop Lovers.jpg",
-        "postssrc": [
-            "../images/Orgs/TTL/1.jpg"
-        ]
+        "img": "../images/OrgLogo/UPV TableTop Lovers.jpg"
     }, 
     {
         "id": 5,
         "name": "UPV Akeanon",
         "tag": "Regional",
-        "img": "../images/OrgLogo/UPV Akeanon.jpg",
-        "postssrc": []
+        "img": "../images/OrgLogo/UPV Akeanon.jpg"
     }, 
     {
         "id": 6,
         "name": "Campus Bible Fellowship",
         "tag": ["Performing", "Univ", "Interest"],
-        "img": "../images/OrgLogo/Campus Bible Fellowship.jpg",
-        "postssrc": [
-            "../images/Orgs/CBF/1.jpg"
-        ]
+        "img": "../images/OrgLogo/Campus Bible Fellowship.jpg"
     }, 
     {
         "id": 7,
         "name": "UPV Badminton Club",
         "tag": ["Univ", "Sports", "Interest"],
-        "img": "../images/OrgLogo/UPV Badminton Club.jpg",
-        "postssrc": []
+        "img": "../images/OrgLogo/UPV Badminton Club.jpg"        
     }, 
     {
         "id": 8,
         "name": "UPV Volleyball Club",
         "tag": ["Univ", "Sports", "Interest"],
-        "img": "../images/OrgLogo/UPV Volleyball Club.jpg",
-        "postssrc": []
+        "img": "../images/OrgLogo/UPV Volleyball Club.jpg"        
     }, 
     {
         "id": 9,
         "name": "UPV Statistical Society",
         "tag": ["Course", "College"],
-        "img": "../images/OrgLogo/UPV Statistical Society.jpg",
-        "postssrc": []
+        "img": "../images/OrgLogo/UPV Statistical Society.jpg"        
     }, 
     {
         "id": 10,
         "name": "NASYO ORG",
         "tag": ["Academic", "Univ"],
-        "img": "../images/OrgLogo/NASYO ORG.jpg",
-        "postssrc": []
+        "img": "../images/OrgLogo/NASYO ORG.jpg"        
     }, 
     {
         "id": 11,
         "name": "UPV Hublag Dance Company",
         "tag": ["Univ", "Performing", "Interest"],
-        "img": "../images/OrgLogo/UPV Hublag Dance Company.jpg",
-        "postssrc": []
+        "img": "../images/OrgLogo/UPV Hublag Dance Company.jpg"        
     }, 
     {
         "id": 12,
         "name": "Pisay Org",
         "tag": ["Academic", "Univ"],
-        "img": "../images/OrgLogo/Pisay Org.jpg",
-        "postssrc": [] 
+        "img": "../images/OrgLogo/Pisay Org.jpg"         
     }, 
     {
         "id": 13,
         "name": "UP Gaqued 'Y ang mga Palaweño",
         "tag": "Regional",
-        "img": "../images/OrgLogo/UP Gaqued 'Y ang mga Palaweño.png",
-        "postssrc": [
-            "../images/Orgs/Palawan/1.jpg",
-            "../images/Orgs/Palawan/2.jpg",
-            "../images/Orgs/Palawan/3.jpg"
-        ]
+        "img": "../images/OrgLogo/UP Gaqued 'Y ang mga Palaweño.png"
     }, 
     {
         "id": 14,
         "name": "Pagbutlak",
         "tag": ["Univ", "Publications", "Political"],
-        "img": "../images/OrgLogo/Pagbutlak.jpg",
-        "postssrc": []
+        "img": "../images/OrgLogo/Pagbutlak.jpg"        
     },
     {
         "id": 15,
         "name": "Sandigan ng Mag-aaral para sa Sambayanan - UPV",
         "tag": ["Political", "Publications"],
-        "img": "../images/OrgLogo/Sandigan ng Mag-aaral para sa Sambayanan - UPV.jpg",
-        "postssrc": []
+        "img": "../images/OrgLogo/Sandigan ng Mag-aaral para sa Sambayanan - UPV.jpg"        
     }
 ]
