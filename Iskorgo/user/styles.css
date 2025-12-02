@@ -260,6 +260,12 @@ main {
 .new-user-section {
     height: 85%;
 }
+.achievement-section-container .back-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
 .new-user-section .header {
     position: relative;
     top: -105px;
@@ -354,7 +360,7 @@ main {
 }
 
 .new-user-section .event-post {
-    width: 250px;
+    width: 100%;
     background-color: var(--color-post-field);
     padding: var(--pad-y-large) var(--pad-x-small);
     border-radius: 10px;

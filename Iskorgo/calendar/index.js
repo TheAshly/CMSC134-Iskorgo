@@ -83,18 +83,21 @@ async function createCalendar(monthDisplay) {
                 const dayAnchor = document.getElementById(`day-anchor-point-${currentDate}`);
                 if (dayItem) {
                     if (currentViewedDate) {
+                        if (currentViewedDate === dayItem) {
+                            document.querySelector('#calendar-list').classList.toggle("hidden");
+                        } else {
+                            document.querySelector('#calendar-list').classList.remove("hidden");
+                        }
                         currentViewedDate.classList.remove("viewed-date");
                     } else {
                         document.querySelector('#calendar-list').classList.remove("hidden");
                     }
                     currentViewedDate = dayItem;
-                    dayItem.classList.add("viewed-date");
-                    
+                    dayItem.classList.add("viewed-date");   
                 }
                 if (dayAnchor) {
                     dayAnchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 } 
-
             })
         } else {              
             const nextMonthDate = i - (monthDisplay.dayStart + monthDisplay.daysInMonth) + 1;
