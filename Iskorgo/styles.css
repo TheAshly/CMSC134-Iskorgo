@@ -8,6 +8,8 @@
   --color-secondary: #f26b41; 
   --border-color: #000000;
   --color-subtext: #898989;
+  --color-post-field: #FEF3ED;
+
 
   
   /* font-size */
@@ -133,6 +135,46 @@ main {
     overflow-y: auto; 
     flex-grow: 1; 
 }
+.modal {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-post-field);
+    padding: var(--pad-y-default) var(--pad-x-default);
+}
+.modal a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+.modal-header {
+    margin: var(--mar-default) 0;
+}
+.modal-header h1 a {
+    font-size: var(--fs-20);
+    font-weight: var(--fw-semi-bold);
+}
+.modal-header h3 {
+    font-size: var(--fs-18);
+    margin-top: var(--mar-small);
+}
+.modal-header h3 a {
+    font-weight: var(--fw-semi-bold);
+}
+.modal-body {
+    line-height: 24px;   
+}
+.modal-body .following {
+    color: var(--color-primary);
+}
+.modal-footer {
+    display: flex;
+    justify-content: center;
+}
+.modal-footer a {
+    font-size: var(--fs-16);
+    font-weight: var(--fw-semi-bold);
+}
 
  /* NAVBAR STYLES */
 footer {
@@ -168,7 +210,6 @@ footer img {
     aspect-ratio: 1/1;    /* Keeps them square */
     object-fit: contain;  /* Ensures the image content fits nicely within the square */
 }
-
 
 .selected-icon {
     height: 40px;
