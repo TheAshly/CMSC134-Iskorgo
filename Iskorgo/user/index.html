@@ -30,8 +30,8 @@
                         <span>Remember Me</span>                    
                     </div>
                     <div class="button-group">
-                        <button type="submit" class="btn-primary">Log In</button>
-                        <button type="login-using-fb" class="btn-secondary"><span class="facebook-img-container"><img src="./../images/facebook.png" width="25" height="25"></span>Log in with Facebook</button>
+                        <button type="submit" class="btn-primary login">Log In</button>
+                        <button  class="btn-secondary login-using-fb"><span class="facebook-img-container"><img src="./../images/facebook.png" width="25" height="25"></span>Log in with Facebook</button>
                     </div>
                     
                     <div class="forget-password-group">
@@ -60,7 +60,7 @@
                         <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
                     </div>
                     <div class="button-group">
-                        <button type="submit" class="btn-primary">Log In</button>
+                        <button type="submit" class="btn-primary sign-up">Sign In</button>
                     </div>
                     <div class="footer">
                         <p>Already have an account?</p>
@@ -74,7 +74,7 @@
             <div class="options">
                 <img width="32" height="32" src="./../images/settings.png">
             </div>
-            <div class="options-dropdown">
+            <div class="options-dropdown hidden">
                 <div class="label"> 
                     Options <img class="label-img" width="24" height="24" src="./../images/settings.png">
                 </div>
@@ -82,7 +82,7 @@
                 <div class="dropdown">Dark Mode</div>
                 <div class="dropdown">Language</div>
                 <div class="dropdown">About</div>
-                <div class="dropdown">Log Out</div>
+                <div class="dropdown log-out">Log Out</div>
             </div>
 
             <div class="new-user-section">
@@ -150,9 +150,6 @@
         </section>
 
         <section class="achievement-section-container hidden">
-            <div class="options">
-                <img width="32" height="32" src="./../images/settings.png">
-            </div>
             <div class="achievement-section">
                 <div class="rectangular-rounded-bar"></div>
                 <h3 class="header">Achievements</h3>
