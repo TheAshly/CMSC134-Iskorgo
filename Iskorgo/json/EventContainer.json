@@ -5,7 +5,8 @@
         "what": "UPV Univ-Wide org Fair",
         "when": "October 8-9, 2025",
         "where": "UPV Dorm Area",
-        "going": []
+        "going": [],
+        "img" : "./../images/OrgLogo/UPV Elektrons.jpg"
     }, 
     {
         "id": 2,
@@ -23,4 +24,5 @@
         "where": "Road 1, Dorm Area, UPV",
         "going": []
     }
+
 ]
