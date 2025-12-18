@@ -54,5 +54,20 @@
             "./images/People/Sunday.jpg",
             "./images/People/ForeverYoung.jpg"
         ]
+    },
+    {
+        "id": 5,
+        "source_post": 5,
+        "source_org": 8,
+        "what": "UPV Volleyball Club's Paghiliusa 2025",
+        "when": "October 8-9, 2025, 9AM - 5PM",
+        "where": "UPV Dorm Area",
+        "going": [
+            "./images/People/Ch4knu.jpg",
+            "./images/People/JebsForHire.jpg",
+            "./images/People/RegEx Abuser.jpg",
+            "./images/People/Sunday.jpg",
+            "./images/People/ForeverYoung.jpg"
+        ]
     }
 ]
