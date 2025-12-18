@@ -97,8 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
 
-
-
         card.appendChild(followStatus);
         card.addEventListener('click', async () => {
             const modal = document.querySelector(".dark-overlay")
@@ -148,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
             subFollowStatus.classList.add('follow-status');
             subFollowStatus.classList.add('pop-out');
             // Set initial state based on 'followed' property
-            if (!org.followed) {
+            if (org.followed) {
                 subFollowStatus.textContent = 'Followed';
                 subFollowStatus.classList.add('followed');
             } else {
@@ -159,8 +157,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // Add click listener to toggle status
             subFollowStatus.addEventListener('click', () => {
                 toggleFollowStatus(subFollowStatus);
+                toggleFollowStatus(followStatus);
             });
-            toggleFollowStatus(subFollowStatus);
+        
 
             let body = document.querySelector(".main-body")
             const subExit = document.createElement('div');
