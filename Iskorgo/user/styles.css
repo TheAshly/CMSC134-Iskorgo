@@ -151,6 +151,8 @@ main {
     flex-direction: column;
     background-color: white;
     box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    border: solid 2px black;
+    border-radius: 10px;
 
 
     header {
@@ -642,7 +644,7 @@ button, input {
     align-items: center;
     border-radius: 50%;
     border: solid 3px white;
-    cursor: pointer;
+    cursor: pointer;    
 }
 
 .options {
