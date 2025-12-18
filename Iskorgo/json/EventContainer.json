@@ -7,7 +7,7 @@
         "when": "October 8-9, 2025",
         "where": "UPV Dorm Area",
         "going": [
-            "./images/People/Chak.jpg",
+            "./images/People/Ch4knu.jpg",
             "./images/People/JebsForHire.jpg",
             "./images/People/RegEx Abuser.jpg"
         ],
@@ -21,8 +21,9 @@
         "when": "October 14, 2025; 5:30PM - 8:00PM",
         "where": "AV 104, CFOS, UPV",
         "going": [
-            "./images/People/Chak2.jpg",
-            "./images/People/JebsForHire.jpg"
+            "./images/People/Ch4knu.jpg",
+            "./images/People/Sunday.jpg",
+            "./images/People/RegEx Abuser.jpg"
         ]
     },
     {
@@ -33,10 +34,26 @@
         "when": "October 8-9, 2025",
         "where": "Road 1, Dorm Area, UPV",
         "going": [
-            "./images/People/Chak.jpg",
+            "./images/People/Ch4knu.jpg",
             "./images/People/JebsForHire.jpg",
-            "./images/People/RegEx Abuser.jpg"
+            "./images/People/RegEx Abuser.jpg",
+            "./images/People/Sunday.jpg",
+            "./images/People/ForeverYoung.jpg"
+        ]
+    },
+    {
+        "id": 4,
+        "source_post": 4,
+        "source_org": 4,
+        "what": "TTL Gamenight",
+        "when": "October 10 and 15, 2025 6Pm onwards",
+        "where": "October 10 - Room 106 CAS; October 15 - Dear Ella's",
+        "going": [
+            "./images/People/Ch4knu.jpg",
+            "./images/People/JebsForHire.jpg",
+            "./images/People/RegEx Abuser.jpg",
+            "./images/People/Sunday.jpg",
+            "./images/People/ForeverYoung.jpg"
         ]
     }
-
 ]
