@@ -94,9 +94,9 @@ async function main() {
                             <span>WHO: People_Going</span>
                         </div>
                         <div class="event-actions">
-                            <span>Pin</span>
+                            <img class="pin-event" src="./images/clip.png" />
                             <br>
-                            <span>Share</span>
+                            <span class="share-event">Share</span>
                         </div>
                     </div>
                 
