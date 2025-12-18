@@ -159,8 +159,8 @@ async function displayEvents(monthDisplay ) {
             const img = document.createElement('img');
             img.classList.add('event-item');
             img.src = "./." + orgs.filter(e => (e.id === event.source_org))[0].img;
-            img.width = "30";
-            img.height = "30";
+            img.width = "20";
+            img.height = "20";
             list.appendChild(img)
         } else {
             let startIndex = monthDisplay.dayStart + start - 1;
@@ -175,8 +175,8 @@ async function displayEvents(monthDisplay ) {
                 const img = document.createElement('img');
                 img.classList.add('event-item');
                 img.src = "./." + orgs.filter(e => (e.id === event.source_org))[0].img;
-                img.width = "30";
-                img.height = "30";
+                img.width = "20";
+                img.height = "20";
                 list.appendChild(img)
             }
 
@@ -192,8 +192,8 @@ async function displayEvents(monthDisplay ) {
                 const img = document.createElement('img');
                 img.classList.add('event-item');
                 img.src = "./." + orgs.filter(e => (e.id === event.source_org))[0].img;
-                img.width = "30";
-                img.height = "30";
+                img.width = "20";
+                img.height = "20";
                 list.appendChild(img)
             }
         }
