@@ -96,6 +96,11 @@ document.addEventListener('DOMContentLoaded', () => {
             followStatus.classList.add('not-followed');
         }
 
+        followStatus.addEventListener('click', function(event) {
+            event.stopPropagation()
+            toggleFollowStatus(followStatus);
+
+        });
 
         card.appendChild(followStatus);
         card.addEventListener('click', async () => {
@@ -146,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
             subFollowStatus.classList.add('follow-status');
             subFollowStatus.classList.add('pop-out');
             // Set initial state based on 'followed' property
-            if (org.followed) {
+            if (followStatus.textContent == 'Followed') {
                 subFollowStatus.textContent = 'Followed';
                 subFollowStatus.classList.add('followed');
             } else {
