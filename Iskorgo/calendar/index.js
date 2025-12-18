@@ -126,6 +126,22 @@ async function displayEvents(monthDisplay ) {
                event.parsedDate.year === monthDisplay.year;
     });
 
+    // if (!monthEvents) {
+    //     const dayItem = document.createElement('div');
+    //     dayItem.classList.add('day-item');
+        
+    //     const day = parseInt(cell.querySelector('p').textContent);
+    //     const cellIndex = monthDisplay.dayStart + i;
+    //     const cellDayOfWeek = dayNames[cellIndex % 7];
+    //     calendarList.appendChild(dayItem);
+        
+    //     const dayHeader = document.createElement('h3');
+    //     dayHeader.textContent = `${cellDayOfWeek} ${day}`;
+    //     dayHeader.id = "day-anchor-point-" + day;
+    //     dayItem.id = "day-" + day;
+    //     dayItem.appendChild(dayHeader);
+    // }
+
     const calendarCells = document.querySelectorAll('.calendar-cell');
     for (const event of monthEvents) {
         const start = event.parsedDate.startDay;

@@ -271,6 +271,7 @@ main {
     top: -105px;
     display: grid;
     grid-template-columns: 120px 1fr;
+    color: white;
 
 }
 .new-user-section .header .left {
@@ -304,7 +305,7 @@ main {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    border: solid 3px black;
+    border: solid 3px white;
     background-color: var(--color-body);
 }
 .new-user-section .header .achievements {
@@ -314,7 +315,8 @@ main {
     padding: var(--pad-y-small) var(--pad-x-default);
     border-radius: 10px;
     margin-top: var(--mar-default);
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
+    border: solid 2px black;
     cursor: pointer;
 }
 .new-user-section .header .achievement-body {
@@ -323,6 +325,7 @@ main {
     justify-content: center;
     align-items: flex-start;
     font-size: var(--fs-16);
+    color: white;
 }
 .new-user-section .header .achievement-count {
     font-size: var(--fs-24);
@@ -363,6 +366,7 @@ main {
     width: 100%;
     background-color: var(--color-post-field);
     padding: var(--pad-y-large) var(--pad-x-small);
+    border: solid 2px var(--color-header);
     border-radius: 10px;
 } 
 .new-user-section .event-post .post-header {
@@ -404,13 +408,15 @@ main {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background-color: var(--color-primary);
+    border: solid 2px black;
+    background-color: var(--color-secondary);
     cursor: pointer;
 } 
 .new-user-section .post-footer img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    filter: invert(1);
 } 
 
 .achievement-section {
@@ -509,6 +515,7 @@ button, input {
     border-radius: 50%;
     border: solid 3px black;
     cursor: pointer;
+    filter: invert(1);
 }
 .options-dropdown {
     width: 160px;
@@ -518,9 +525,10 @@ button, input {
     z-index: 100;
     padding: var(--pad-y-default) var(--pad-x-default);
     border-radius: 10px;
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
+    color: white;
     font-size: var(--fs-18);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.14);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
 .options-dropdown .label {
@@ -531,11 +539,12 @@ button, input {
 }
 .options-dropdown .label-img {
     margin-left: var(--mar-xsmall);
+    filter: invert(1)
 }
     .options-dropdown .dropdown {
         text-align: right;
         padding: var(--pad-y-default) var(--pad-x-default);
-        border-bottom: solid 2px black;
+        border-bottom: solid 2px white;
         font-size: var(--fs-16);
         cursor: pointer;
     }
