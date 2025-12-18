@@ -117,6 +117,7 @@ async function createCalendar(monthDisplay) {
 }
 
 async function displayEvents(monthDisplay ) {
+    const orgs = await loadOrgs()
     const events = await loadEvents();
     let monthEvents = events.map(event => ({ ...event, parsedDate: parseEventDate(event.when) }));
     monthEvents = monthEvents.filter(event => {
@@ -141,7 +142,7 @@ async function displayEvents(monthDisplay ) {
             }
             const img = document.createElement('img');
             img.classList.add('event-item');
-            img.src = event.img;
+            img.src = "./." + orgs.filter(e => (e.id === event.source_org))[0].img;
             img.width = "30";
             img.height = "30";
             list.appendChild(img)
@@ -157,7 +158,7 @@ async function displayEvents(monthDisplay ) {
                 }
                 const img = document.createElement('img');
                 img.classList.add('event-item');
-                img.src = event.img;
+                img.src = "./." + orgs.filter(e => (e.id === event.source_org))[0].img;
                 img.width = "30";
                 img.height = "30";
                 list.appendChild(img)
@@ -174,7 +175,7 @@ async function displayEvents(monthDisplay ) {
                 }
                 const img = document.createElement('img');
                 img.classList.add('event-item');
-                img.src = event.img;
+                img.src = "./." + orgs.filter(e => (e.id === event.source_org))[0].img;
                 img.width = "30";
                 img.height = "30";
                 list.appendChild(img)
@@ -252,7 +253,7 @@ async function createCalendarList(monthDisplay) {
                    parsed.year === monthDisplay.year &&
                    parsed.startDay <= day && day <= parsed.endDay;
         });
-
+        
         if (dayEvents.length === 0) {
             dayItem.classList.add("hidden")
             const noEventsMsg = document.createElement('p');
@@ -269,9 +270,8 @@ async function createCalendarList(monthDisplay) {
                 iconDiv.classList.add("icon-div");
                 
                 const icon = document.createElement('img');
-                icon.classList.add("invert")
 
-                icon.src = '../images/clip.png';
+                icon.src = '../images/push-pin.png';
                 iconDiv.appendChild(icon);
                 eventDiv.appendChild(iconDiv);
 
