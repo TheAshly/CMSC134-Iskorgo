@@ -69,7 +69,6 @@ function togglePinStatus(pinElement) {
     }   
 }
 
-const element = document.querySelector(".body")
 
 // Optional: Remove the element from the DOM after the animation completes
 
@@ -271,21 +270,20 @@ async function main() {
             postDescriptionBlock.innerText = truncatedDescription;
             postDetails.appendChild(postDescriptionBlock);
             if(truncatedDescription != postDescription){
-                const readMore = document.createElement('p');
-                readMore.style.marginBlock  = '10px'
+                const readMore = document.createElement('span');
                 readMore.classList.add('see-more');
-                readMore.innerHTML= "\nSee more <i class='fa-solid fa-chevron-down'></i>";
+                readMore.innerText = "\nSee more";
                 postDetails.appendChild(readMore);
                 readMore.addEventListener('click', () => {
 
                     if(readMore.classList.contains('less')){
                         readMore.classList.remove('less');
                         postDescriptionBlock.innerText = truncatedDescription
-                        readMore.innerHTML= "\nSee more <i class='fa-solid fa-chevron-down'></i>";
+                        readMore.innerText = "\nSee more";
                     } else {
                         readMore.classList.add('less');
                         postDescriptionBlock.innerText = postDescription
-                        readMore.innerHTML= "\nSee less <i class='fa-solid fa-chevron-up'></i>";
+                        readMore.innerText = "\nSee less";
                     }
                     
                     

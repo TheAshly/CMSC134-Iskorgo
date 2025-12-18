@@ -25,7 +25,7 @@ function truncateString(str, maxLength) {
 document.addEventListener('DOMContentLoaded', () => {
     const JSON_PATH = '../json/OrgsList.json';
     const orgsListContainer = document.getElementById('orgs-list');
-
+    
     /**
      * Toggles the follow status of an organization card.
      * @param {HTMLElement} followElement - The element displaying 'Follow' or 'Followed'.
@@ -91,23 +91,23 @@ document.addEventListener('DOMContentLoaded', () => {
         if (org.followed) {
             followStatus.textContent = 'Followed';
             followStatus.classList.add('followed');
-            followStatus.classList.add("p")
         } else {
             followStatus.textContent = 'Follow';
             followStatus.classList.add('not-followed');
         }
 
-        // Add click listener to toggle status
-        followStatus.addEventListener('click', () => {
-            toggleFollowStatus(followStatus);
-        });
+
+
 
         card.appendChild(followStatus);
         card.addEventListener('click', async () => {
-
+            const modal = document.querySelector(".dark-overlay")
+            modal.style.display = "block";
+            const subContainer = document.createElement('div');
+            subContainer.classList.add('pop-out-org');
 
             const subCard = document.createElement('div');
-            subCard.classList.add('pop-out-org');
+            subCard.classList.add('pop-out-org-container');
 
             const subLogo = document.createElement('img');
             subLogo.classList.add('org-logo');
@@ -161,11 +161,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 toggleFollowStatus(subFollowStatus);
             });
             toggleFollowStatus(subFollowStatus);
-            subCard.appendChild(subFollowStatus);
+
             let body = document.querySelector(".main-body")
+            const subExit = document.createElement('div');
+            subExit.classList.add('pop-out-exit');
+            subExit.innerText = "x";
 
+            subExit.addEventListener('click', () => {
+                body.removeChild(subContainer);
+                body.removeChild(orgPosts);
+                modal.style.display = "none";
+            });
 
-            body.appendChild(subCard);
+            subCard.appendChild(subExit);
+            subContainer.appendChild(subCard);
+            subContainer.appendChild(subFollowStatus);
+            body.appendChild(subContainer);
 
             const orgPosts = document.createElement('div');
             orgPosts.classList.add('org-posts');

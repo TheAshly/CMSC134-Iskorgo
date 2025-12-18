@@ -424,7 +424,10 @@ footer img {
     background-color: var(--color-primary);
 }
 
-
+.pop-out-org-container{
+    box-sizing: border-box;
+    display: flex;                   /* 1. Enable Flexbox on the container */ 
+}
 
 .pop-out-org { 
     position: absolute;
@@ -440,6 +443,7 @@ footer img {
     border-top-left-radius: 15px;  
     border-top-right-radius: 15px; 
     display: flex;                   /* 1. Enable Flexbox on the container */
+    flex-direction: column;
     padding: 20px 10px;                 /* Optional: Add a little padding so images don't touch the screen edges */
 }
 
@@ -449,10 +453,10 @@ footer img {
     justify-content: center;
     border: 2px solid var(--color-header);
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
-    margin-right: 15px;
+    margin-right: 10px;
     background-color: #333; /* Placeholder background color */
 }
 
@@ -495,7 +499,9 @@ footer img {
 
 .follow-status.pop-out  {
     height: 28px;
+    width: 100%;
     padding: 0 8px;
+    margin: 0.5em;
 
     white-space: nowrap; /* Prevents text wrap */
     background-color: var(--color-secondary);
@@ -509,7 +515,27 @@ footer img {
     display: flex;
     align-items: center;
     justify-content: center; 
-    margin-top: 40px;
+}
+.follow-status.pop-out.followed {
+    background-color: var(--color-primary);
+}
+.pop-out-exit{
+    height: 32px;
+    aspect-ratio: 1/1;
+    margin-left: 0.2em;
+
+    white-space: nowrap; /* Prevents text wrap */
+    background-color: var(--color-secondary);
+    border: 2px solid black;
+    border-radius: 20px;
+    color: white;
+    font-size: var(--fs-30);
+    font-family: var(--ff-body);
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    cursor: pointer;
 }
 
 .org-posts {
@@ -517,7 +543,7 @@ footer img {
     width: 101%;    
     bottom: 0;
     left: -2px; 
-    height: 65vh;
+    height: 64vh;
     background-color: var(--color-body);
     z-index: 9;   
 
@@ -611,4 +637,13 @@ post {
     display: flex;
     align-items: center;
     justify-content: center;    
+}
+.dark-overlay {
+    display: none;
+    position: absolute;
+    min-height: 100vh;        
+    max-height: 100vh;     
+    aspect-ratio: 9 / 19.5;
+    background-color: #0000006b;
+    z-index: 6;
 }
