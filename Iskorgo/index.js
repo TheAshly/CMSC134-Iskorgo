@@ -78,8 +78,35 @@ const shareData = {
   url: window.location.href,
 };
 
-async function share(data) {
-    await navigator.share(data);
+async function handleShareClick() {
+    try {
+        // 1. Check if the browser supports the Share API at all
+        if (!navigator.share) {
+            console.log('Web Share API not supported.');
+            fallbackShare(); // Provide a fallback (like copying to clipboard)
+            return;
+        }
+
+        // 2. Validate if the specific data is shareable
+        if (navigator.canShare && navigator.canShare(shareData)) {
+            await navigator.share(shareData);
+            console.log('Successful share');
+        } else {
+            console.log('This data cannot be shared by this browser.');
+        }
+    } catch (error) {
+        // Handle specific errors like AbortError (user closed the share sheet)
+        if (error.name !== 'AbortError') {
+            console.error('Error sharing:', error);
+        }
+    }
+}
+
+// Fallback logic for unsupported browsers
+function fallbackShare() {
+    // Example: Copy URL to clipboard
+    navigator.clipboard.writeText(shareData.url);
+    alert('Link copied to clipboard!');
 }
 
 async function main() {
