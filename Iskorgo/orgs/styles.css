@@ -195,6 +195,7 @@ header.org-header {
     margin-right: var(--pad-x-default);
     border: 2px solid var(--color-header); /* Black border around search box */
     height: 45px;
+    cursor: pointer;
 }
 
 .search-bar input {
@@ -223,6 +224,7 @@ header.org-header {
     border: 2px solid var(--color-header); /* Black border */
     border-radius: 50%;
     background-color: white; /* Creamy background */
+    cursor: pointer;
 }
 
 .filter-icon .material-icons {
@@ -283,6 +285,7 @@ footer img {
     align-items: center;
     padding: 0 var(--pad-x-default);
     margin: var(--mar-small) 0;
+    cursor: pointer;
 
     width: 100%; 
     box-sizing: border-box; 
@@ -359,6 +362,7 @@ footer img {
     display: flex;
     align-items: center;
     justify-content: center; 
+    cursor: pointer;
 }
 
 .follow-status.followed {

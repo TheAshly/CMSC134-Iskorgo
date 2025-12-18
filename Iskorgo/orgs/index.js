@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (org.followed) {
             followStatus.textContent = 'Followed';
             followStatus.classList.add('followed');
+            followStatus.classList.add("p")
         } else {
             followStatus.textContent = 'Follow';
             followStatus.classList.add('not-followed');
