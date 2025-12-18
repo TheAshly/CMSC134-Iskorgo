@@ -170,6 +170,7 @@ header.org-header {
     top: 50px;        
     right: 1.5em;        
     background-color: var(--color-secondary);
+    color: white;
     padding: 10px var(--pad-x-default);
     border-radius: 10px;
     z-index: 999;         
@@ -179,9 +180,9 @@ header.org-header {
 
 .filter-item {
     text-align: right;
-    border-bottom: 2px solid var(--color-header);
+    border-bottom: 2px solid white;
     font-size: var(--fs-14);
-    padding: 5px 0;
+    padding: var(--pad-y-default) 0;
     cursor: pointer;
 }
 
@@ -230,6 +231,7 @@ header.org-header {
 .filter-icon .material-icons {
     color: var(--color-primary); /* Green color for the icon inside the circle */
     font-size: 30px;
+    color: var(--color-secondary)
 }
 
  /* NAVBAR STYLES */

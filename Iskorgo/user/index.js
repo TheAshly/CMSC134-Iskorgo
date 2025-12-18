@@ -123,3 +123,28 @@ function goToNewUser(e) {
 loginBtn.addEventListener("click", goToOldUser);
 loginWithFBBtn.addEventListener("click", goToOldUser);
 signUpBtn.addEventListener("click", goToNewUser);
+
+document.querySelectorAll(".delete-event").forEach( btn => {
+    btn.addEventListener("click", () => {   
+        btn.closest(".event-post").classList.add("hidden");
+    })  
+})
+
+document.querySelectorAll(".notif-event").forEach( btn => {
+    btn.addEventListener("click", () => {   
+        btn.classList.toggle("followed");
+    })  
+})
+
+
+
+const notifIcon = document.querySelector(".notifications");
+const closeNotifIcon = document.querySelector(".close-icon");
+const notifications = document.querySelector(".notification-modal");
+
+notifIcon.addEventListener("click", () => {
+    notifications.classList.toggle("hidden");
+}) 
+closeNotifIcon.addEventListener("click", () => {
+    notifications.classList.toggle("hidden");
+}) 

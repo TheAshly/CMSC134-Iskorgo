@@ -254,7 +254,6 @@ main {
     margin: 0;
     box-sizing: border-box;
     max-height: 100%;
-    flex: 1;
 }
 .event-item {
     border: solid 1px black;
@@ -317,6 +316,7 @@ main {
     height: 32px;
     border-radius: 50%;
     background-color: var(--color-secondary);
+    border: solid 2px black;
     display: flex;
     align-items: center;
     justify-content: center;

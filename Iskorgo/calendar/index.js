@@ -126,6 +126,22 @@ async function displayEvents(monthDisplay ) {
                event.parsedDate.year === monthDisplay.year;
     });
 
+    // if (!monthEvents) {
+    //     const dayItem = document.createElement('div');
+    //     dayItem.classList.add('day-item');
+        
+    //     const day = parseInt(cell.querySelector('p').textContent);
+    //     const cellIndex = monthDisplay.dayStart + i;
+    //     const cellDayOfWeek = dayNames[cellIndex % 7];
+    //     calendarList.appendChild(dayItem);
+        
+    //     const dayHeader = document.createElement('h3');
+    //     dayHeader.textContent = `${cellDayOfWeek} ${day}`;
+    //     dayHeader.id = "day-anchor-point-" + day;
+    //     dayItem.id = "day-" + day;
+    //     dayItem.appendChild(dayHeader);
+    // }
+
     const calendarCells = document.querySelectorAll('.calendar-cell');
     for (const event of monthEvents) {
         const start = event.parsedDate.startDay;
@@ -143,8 +159,8 @@ async function displayEvents(monthDisplay ) {
             const img = document.createElement('img');
             img.classList.add('event-item');
             img.src = "./." + orgs.filter(e => (e.id === event.source_org))[0].img;
-            img.width = "30";
-            img.height = "30";
+            img.width = "20";
+            img.height = "20";
             list.appendChild(img)
         } else {
             let startIndex = monthDisplay.dayStart + start - 1;
@@ -159,8 +175,8 @@ async function displayEvents(monthDisplay ) {
                 const img = document.createElement('img');
                 img.classList.add('event-item');
                 img.src = "./." + orgs.filter(e => (e.id === event.source_org))[0].img;
-                img.width = "30";
-                img.height = "30";
+                img.width = "20";
+                img.height = "20";
                 list.appendChild(img)
             }
 
@@ -176,8 +192,8 @@ async function displayEvents(monthDisplay ) {
                 const img = document.createElement('img');
                 img.classList.add('event-item');
                 img.src = "./." + orgs.filter(e => (e.id === event.source_org))[0].img;
-                img.width = "30";
-                img.height = "30";
+                img.width = "20";
+                img.height = "20";
                 list.appendChild(img)
             }
         }

@@ -197,7 +197,7 @@ body {
 }
 
 .filter-icon .material-icons {
-    color: var(--color-primary); /* Green color for the icon inside the circle */
+    color: var(--color-secondary); /* Green color for the icon inside the circle */
     font-size: 30px;
 }
 
