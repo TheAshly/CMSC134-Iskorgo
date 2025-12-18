@@ -293,17 +293,14 @@ post {
 }
 
 /* --- Ensure the content inside the inner divs remains vertical --- */
-.event-info,
-.event-actions {
+.event-info {
     display: flex;
-    flex-direction: column; /* Stacks spans vertically */
-    gap: 5px;               /* Adds space between the vertical spans */
-    color
+    flex-direction: column;  
+    gap: 5px;                
 }
 
-/* Optional: makes the spans within those divs block elements for consistency */
-.event-info span,
-.event-actions span {
+ /* Optional: makes the spans within those divs block elements for consistency */
+.event-info span {
     display: block; 
 }
 
@@ -495,4 +492,23 @@ footer img {
     align-items: center;
     justify-content: center; 
     padding: 0.2em;
+}
+
+.pin-event, .share-event {
+    height: 24px;
+    padding: 0 8px;
+    /* Removed global styles for .org-name, .follow-status for clean separation */
+    white-space: nowrap; /* Prevents text wrap */
+    background-color: var(--color-secondary);
+    border: 2px solid black;
+    border-radius: 20px;
+    color: white;
+    font-size: var(--fs-16);
+    font-family: var(--ff-body);
+
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    
 }
