@@ -71,9 +71,16 @@ toUser.addEventListener("click", e => {
 
 const options = document.querySelector(".options");
 const optionDropdown = document.querySelector(".options-dropdown");
+const closeOptionsIcon = document.querySelector(".options-dropdown .close-icon");
+
 options.addEventListener("click", () => {
     optionDropdown.classList.toggle("hidden");
 }) 
+
+closeOptionsIcon.addEventListener("click", () => {
+    optionDropdown.classList.toggle("hidden");
+}) 
+
 
 // put logged-out state here 
 const logout = document.querySelector(".log-out");
@@ -139,7 +146,7 @@ document.querySelectorAll(".notif-event").forEach( btn => {
 
 
 const notifIcon = document.querySelector(".notifications");
-const closeNotifIcon = document.querySelector(".close-icon");
+const closeNotifIcon = document.querySelector(".notification-modal .close-icon");
 const notifications = document.querySelector(".notification-modal");
 
 notifIcon.addEventListener("click", () => {
@@ -148,3 +155,4 @@ notifIcon.addEventListener("click", () => {
 closeNotifIcon.addEventListener("click", () => {
     notifications.classList.toggle("hidden");
 }) 
+

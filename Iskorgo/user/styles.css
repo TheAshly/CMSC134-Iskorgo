@@ -205,6 +205,55 @@ main {
     }
 }
 
+.options-dropdown{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    z-index: 2; 
+    display: flex;
+    padding: var(--pad-y-default) var(--pad-x-default);
+    flex-direction: column;
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: var(--mar-default);
+        border-bottom: solid 1px var(--color-subtext);
+    }
+    header p {
+        font-size: var(--fs-18);
+        font-weight: var(--fw-medium);
+    }
+    header figure {
+        width: 28px;
+        height: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 2px black;
+        border-radius: 50%;
+        background-color: var(--color-secondary);
+        cursor: pointer;
+    }
+    header figure img {
+        width: 24px;
+        height: 24px;
+        filter: invert(1)
+    }
+}
+.dropdown-list .dropdown {
+    display: flex;
+    border-bottom: solid 1px var(--color-subtext);
+    padding: var(--pad-y-default) 0;    
+    font-size: var(--fs-16);
+}
 .login-section-container, 
 .signup-section-container, 
 .new-user-section-container,
@@ -274,8 +323,7 @@ main {
     font-weight: var(--fw-medium);
 }
 .login-section .header p a {
-    color: var(--color-primary);
-    text-decoration: none;
+    color: var(--color-secondary);
 }
 .login-section .input-field-group input ::placeholder {
     font-weight: var(--fw-medium);
@@ -306,13 +354,14 @@ main {
     margin-right: var(--mar-xsmall);
 }
 .login-section .forget-password-group {
+    font-size: var(--fs-18);
     margin-top: var(--mar-xlarge);    
+    font-weight: var(--fw-medium);
 }
 .login-section .forget-password-group a {    
     font-size: var(--fs-18);
     font-weight: var(--fw-medium);
-    color: var(--color-primary);
-    text-decoration: none;
+    color: var(--color-secondary);
 }
 
 .signup-section .footer {
@@ -322,9 +371,9 @@ main {
     font-size: var(--fs-18);  
     font-weight: var(--fw-medium);  
 }
+
 .signup-section .footer a {
-    color: var(--color-primary);
-    text-decoration: none;
+    color: var(--color-secondary);
 }
 .new-user-section {
     height: 85%;
@@ -569,15 +618,15 @@ button, input {
     cursor: pointer;
 }
 .btn-primary {
-    background-color: var(--color-primary);
-    color: black;
+    background-color: var(--color-secondary);
+    color: white;
     font-size: var(--fs-16);
     font-weight: var(--fw-semi-bold);
     border: none;
 }
 .btn-secondary {
-    border: solid 3px var(--color-primary);
-    color: black;
+    border: solid 3px var(--color-secondary);
+    color: var(--color-secondary);
     font-size: var(--fs-16);
     font-weight: var(--fw-semi-bold);
 }
@@ -610,40 +659,7 @@ button, input {
     cursor: pointer;
     filter: invert(1);
 }
-.options-dropdown {
-    width: 160px;
-    position: absolute;
-    top: 60px;
-    right: 0px;
-    z-index: 100;
-    padding: var(--pad-y-default) var(--pad-x-default);
-    border-radius: 10px;
-    background-color: var(--color-secondary);
-    color: white;
-    font-size: var(--fs-18);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-}
 
-.options-dropdown .label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: var(--mar-xsmall);
-}
-.options-dropdown .label-img {
-    margin-left: var(--mar-xsmall);
-    filter: invert(1)
-}
-    .options-dropdown .dropdown {
-        text-align: right;
-        padding: var(--pad-y-default) var(--pad-x-default);
-        border-bottom: solid 2px white;
-        font-size: var(--fs-16);
-        cursor: pointer;
-    }
-    .options-dropdown .dropdown:last-child {
-        border: none;
-    }
  /* NAVBAR STYLES */
 footer {
     position: absolute;
