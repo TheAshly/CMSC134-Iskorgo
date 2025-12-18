@@ -66,13 +66,17 @@ function togglePinStatus(pinElement) {
         pinElement.classList.remove('followed');;
     } else {
         pinElement.classList.add('followed');
-    }
+    }   
 }
 
+const element = document.querySelector(".body")
+
+// Optional: Remove the element from the DOM after the animation completes
+
 const shareData = {
-  title: 'MDN Web Docs',
-  text: 'Learn web development on MDN!',
-  url: 'https://developer.mozilla.org',
+  title: 'Iskorgo User invites you',
+  text: 'You\'ve been invited over an event! See what it is!',
+  url: window.location.href,
 };
 
 async function share(data) {
@@ -129,14 +133,22 @@ async function main() {
                 eventInfo.classList.add('event-info');
                 eventInfo.innerHTML = `   
                     <span>${eventData.what}</span>
+                    <span><line>${eventData.when}</line></span>   
                     <span><line>${eventData.where}</line></span>
-                    <span><line>${eventData.when}</line></span>
-                    <span>WHO: People_Going</span>      
                 `;
 
                 const goingContainer = document.createElement('div');
-                goingContainer.classList.add('event-container');
-
+                goingContainer.classList.add('going-container');
+                goingContainer.innerHTML = `   
+                    <span><line>Going:</line></span>      
+                `;
+                eventData.going.forEach(going => {
+                    const goingImage = document.createElement('img');
+                    goingImage.classList.add('going-img');
+                    goingImage.src = going
+                    goingContainer.appendChild(goingImage)   
+                });
+                eventInfo.appendChild(goingContainer)   
                 eventContainer.appendChild(eventInfo)
 
                 const eventActions = document.createElement('div');
