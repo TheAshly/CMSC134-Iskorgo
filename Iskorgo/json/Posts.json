@@ -276,5 +276,23 @@
         "postssrc": [
             "./images/Orgs/Elek/3.jpg"
         ]
+    },
+    {
+        "id": 15,
+        "type": "post",
+        "source_org": 3,
+        "date": "November 30 at 2:49 AM",
+        "description": [
+            "As The UP Intermedius celebrates its 33rd anniversary, the spotlight turns toward one of our own—a woman whose talent and artistry has leapt from university halls to lights, lenses, and center stage. Tara kept the passion for theater alive and even expanded to films long after stepping out of the university. Today, her star shines brighter than ever.",
+            "Congratulations, Tara Rose Lozano Molina!",
+            "✨ 20th Bantayan Film Festival Best Actress for Kung Magtikab ang mga Palad",
+            "✨ Ilonggo Cinema Festival Best Acting Performance for Kung ang Bawa Masakitan",
+            "✨ CineMatahum Best Actress for Mother at Sixty",
+            "Your UP Intermedius family is so proud of you.",
+            "Curtains rise, cameras roll—your story continues, and we are honored to cheer you on. 🎭🎬"
+        ],
+        "postssrc": [
+            "./images/Orgs/Intermedius/1.jpg"
+        ]
     }
 ]
