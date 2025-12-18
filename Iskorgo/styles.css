@@ -298,18 +298,26 @@ post {
     display: flex;          /* Makes children horizontal side-by-side */
     justify-content: space-between; /* Pushes the two inner divs to opposite ends */
     width: 100%;
+    gap: 5px;   
 }
 
 /* --- Ensure the content inside the inner divs remains vertical --- */
 .event-info {
     display: flex;
     flex-direction: column;  
-    gap: 5px;                
+    gap: 1px;                
 }
 
  /* Optional: makes the spans within those divs block elements for consistency */
 .event-info span {
     display: block; 
+    font-size: var(--fs-20);
+    font-family: var(--ff-body);
+}
+.event-info line {
+    font-size: var(--fs-16);
+    font-family: var(--ff-body);
+    color: rgba(255, 255, 255, 0.863);
 }
 
 .post-header {
@@ -505,20 +513,24 @@ footer img {
 }
 
 .pin-event, .share-event {
-    height: 24px;
-    padding: 0 8px;
-    /* Removed global styles for .org-name, .follow-status for clean separation */
-    white-space: nowrap; /* Prevents text wrap */
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    padding: 0.1em;
     background-color: var(--color-secondary);
-    border: 2px solid black;
-    border-radius: 20px;
-    color: white;
-    font-size: var(--fs-16);
-    font-family: var(--ff-body);
-
-    margin-left: auto;
     display: flex;
     align-items: center;
-    justify-content: center; 
-    
+    justify-content: center;
+    cursor: pointer;
+    border: 2px solid black;
+    /* Removed global styles for .org-name, .follow-status for clean separation */
+    img{
+        width: 18px;
+        height: 18px;
+    }
+
 }
+.pin-event.followed,  .share-event.followed {
+    background-color: var(--color-followed);
+}  

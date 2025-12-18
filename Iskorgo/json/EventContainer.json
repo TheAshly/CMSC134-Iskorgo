@@ -1,7 +1,7 @@
 [ 
     {
         "id": 1,
-        "source_post": 1,
+        "source_post": 6,
         "source_org": 1,
         "what": "UPV Univ-Wide org Fair",
         "when": "October 8-9, 2025",
@@ -45,8 +45,8 @@
         "source_post": 4,
         "source_org": 4,
         "what": "TTL Gamenight",
-        "when": "October 10 and 15, 2025 6Pm onwards",
-        "where": "October 10 - Room 106 CAS; October 15 - Dear Ella's",
+        "when": "October 10 and 15, 2025 6PM",
+        "where": "Room 106 CAS / Dear Ella's",
         "going": [
             "./images/People/Ch4knu.jpg",
             "./images/People/JebsForHire.jpg",
