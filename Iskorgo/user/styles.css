@@ -133,12 +133,12 @@ body {
 
 main {
     max-width: 50vh; 
-    width: 100%;
+    width: 100%;    
     min-height: 100vh;  
     padding-bottom: 60px; 
     overflow-y: auto; 
     flex-grow: 1; 
-    background-color: var(--color-body);
+    background-color: white;
 }
 .notification-modal {
     position: absolute;
@@ -276,7 +276,7 @@ main {
     gap: var(--mar-large);
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
-    background-color: var(--color-body);
+    background-color: white;
 }
 .login-section .header, 
 .signup-section .header, 
@@ -461,6 +461,7 @@ main {
 }
 .new-user-section .body {
     position: relative;
+    background-color: white;
     top: -70px;
 }
 .new-user-section .followed-organizations img {
@@ -475,15 +476,24 @@ main {
 .new-user-section .events-attending-section .event-list{
     height: 500px;
     overflow-y: auto;
-    
+    border-radius: 10px;
+    background-color: var(--color-body);
+
     .content-pic {
         margin-top:var(--mar-default);
         width: 100%;    
+        height: 300px;
+        object-fit: cover;
     }
 }
 .new-user-section .events-attending-section  .event-list::-webkit-scrollbar {
     display: none;
 } 
+
+.new-user-section .events-attending-section .event-list {
+    border: solid 2px black;
+}
+
 .new-user-section .organizations-following-section h3,
 .new-user-section .events-attending-section h3 {
     font-size: var(--fs-24);
@@ -496,12 +506,13 @@ main {
 }
 
 .new-user-section .event-post {
-    width: 100%;
-    background-color: var(--color-post-field);
+    width: 90%;
+    background-color: white;
     padding: var(--pad-y-large) var(--pad-x-small);
     border: solid 2px var(--color-header);
     border-radius: 10px;
-    margin: var(--mar-default) 0;
+    margin: var(--mar-default) auto;
+    
 } 
 
 
