@@ -174,6 +174,8 @@ header.org-header {
     flex-direction: column;
     background-color: white;
     box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    border: solid 2px black;
+    border-radius: 10px;
 
 
     header {
@@ -273,6 +275,7 @@ header.org-header {
     color: white; /* Green color for the icon inside the circle */
     font-size: 30px;
 }
+
 
 .empty-modal {
     display: inline-block;
