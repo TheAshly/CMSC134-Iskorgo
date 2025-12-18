@@ -221,7 +221,7 @@
     },
     {
         "id": 12,
-        "type": "post",
+        "type": "event",
         "source_org": 2,
         "date": "October 8",
         "description": [
@@ -253,6 +253,30 @@
         ],
         "postssrc": [
             "./images/Orgs/UPV Komsai.Org/8.jpg"
+        ]
+    },
+    {
+        "id": 14,
+        "type": "post",
+        "source_org": 1,
+        "date": "October 17",
+        "description": [
+            "𝗧𝗵𝗲 𝗽𝗼𝘄𝗲𝗿𝘀 𝗼𝗳 𝘁𝗵𝗲 𝐍𝐞𝐱𝐮𝐬 𝗮𝗻𝗱 𝐀𝐞𝐭𝐡𝐞𝐫 𝗶𝗻𝘁𝗲𝗿𝘁𝘄𝗶𝗻𝗲! 💥",
+            "From the 𝒅𝒊𝒈𝒊𝒕𝒂𝒍 𝒃𝒂𝒕𝒕𝒍𝒆𝒇𝒊𝒆𝒍𝒅 to the 𝒉𝒂𝒍𝒍𝒔 𝒐𝒇 𝒌𝒏𝒐𝒘𝒍𝒆𝒅𝒈𝒆, the Houses have fought with skill and wisdom.",
+            "Now the ranking shifts once more – some rise, others fall, and balance trembles in the realm of 𝐄𝐥𝐲𝐬𝐢𝐮𝐦 𝐏𝐫𝐢𝐦𝐞. 🏆",
+            "𝐖𝐡𝐨 𝐰𝐢𝐥𝐥 𝐞𝐦𝐞𝐫𝐠𝐞 𝐜𝐥𝐨𝐬𝐞𝐫 𝐭𝐨 𝐟𝐮𝐥𝐥 𝑹𝒆𝒔𝒕𝒐𝒓𝒂𝒕𝒊𝒐𝒏?",
+            "Hold your breath, Elektrons…. for the truth will soon be revealed. 🔮",
+            "11.07.25",
+            "#elektronsmonth2025",
+            "#elektrumconcord",
+            "#aetherpillar",
+            "#nexuspillar",
+            "#onewiththeconcord",
+            "Pubmat | Emanuel Distor",
+            "Caption | Loven Grace Sorilla"
+        ],
+        "postssrc": [
+            "./images/Orgs/Elek/3.jpg"
         ]
     }
 ]

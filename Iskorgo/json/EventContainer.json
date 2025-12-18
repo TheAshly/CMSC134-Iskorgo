@@ -2,7 +2,6 @@
     {
         "id": 1,
         "source_post": 1,
-        "source_org": 1,
         "what": "UPV Univ-Wide org Fair",
         "when": "October 8-9, 2025",
         "where": "UPV Dorm Area",
@@ -10,11 +9,18 @@
     }, 
     {
         "id": 2,
-        "source_post": 6,
-        "source_org": 6,
+        "source_post": 2,
         "what": "First Formal Big Group Fellowship",
         "when": "October 14, 2025; 5:30PM - 8:00PM",
         "where": "AV 104, CFOS, UPV",
+        "going": []
+    },
+    {
+        "id": 3,
+        "source_post": 12,
+        "what": "Paghiliusa 2025",
+        "when": "October 8-9, 2025",
+        "where": "Road 1, Dorm Area, UPV",
         "going": []
     }
 ]
