@@ -147,6 +147,7 @@ body {
     padding-bottom: 0.8em;
 }
 
+
 .search-bar-container {
     flex-grow: 1;
     height: 45px;
@@ -174,6 +175,7 @@ body {
     color: var(--color-header);
 
     padding: 0 5px;
+    cursor: pointer;
 }
 
 .search-bar-container .material-icons {
@@ -183,21 +185,25 @@ body {
 }
 
 .filter-icon {
-    width: 45px;
-    height: 45px;
-    background-color: var(--color-body); /* Creamy background */
-    border: 2px solid var(--color-header); /* Black border */
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    width: 45px;
+    height: 45px;
+    border: 2px solid var(--color-header); /* Black border */
+    border-radius: 50%;
+    background-color: white; /* Creamy background */
+    cursor: pointer;
 }
 
 .filter-icon .material-icons {
     color: var(--color-primary); /* Green color for the icon inside the circle */
-    font-size: 28px;
+    font-size: 30px;
 }
+
+
+
+
 
 .feed-state {
     display: flex;                  
@@ -209,10 +215,12 @@ body {
         font-family: var(--ff-body);
         font-weight: var(--fw-medium);
         margin: 0.5em;
+        cursor: pointer;
     }
     .selected {
         border-bottom: 5px solid var(--color-primary);
     }
+    
 }
  /* MAIN STYLES */
 main {
@@ -359,6 +367,7 @@ post {
     display: flex;
     align-items: center;
     justify-content: center; 
+    cursor: pointer;
     
 }
 .follow-status.followed {
@@ -376,6 +385,7 @@ post {
     font-size: var(--fs-16);
     font-family: var(--ff-body);
     font-weight: var(--fw-semi-bold);
+    cursor: pointer;
 }
 .post-photo{
     width: 100%;

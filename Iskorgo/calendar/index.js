@@ -269,9 +269,15 @@ async function createCalendarList(monthDisplay) {
                 iconDiv.classList.add("icon-div");
                 
                 const icon = document.createElement('img');
+                icon.classList.add("invert")
+
                 icon.src = '../images/clip.png';
                 iconDiv.appendChild(icon);
                 eventDiv.appendChild(iconDiv);
+
+                iconDiv.addEventListener("click", () => {
+                    iconDiv.classList.toggle("followed")
+                })
                 
                 // Text content
                 const textDiv = document.createElement('div');

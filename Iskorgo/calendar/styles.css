@@ -102,6 +102,13 @@
 .disabled {
     color: var(--color-subtext);
 }
+.followed {
+    background-color: var(--color-primary) !important
+}
+.invert {
+    filter: invert(1)
+}
+
 
 /*  PAGE STYLES  */
 h1, h2, h3, h4, h5, h6, th, td {
@@ -309,7 +316,7 @@ main {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     display: flex;
     align-items: center;
     justify-content: center;
