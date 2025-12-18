@@ -434,11 +434,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Clear loading text
             orgsListContainer.innerHTML = ''; 
-            displayOrgs(orgsData.filter(org => org.name.toLowerCase().includes(query)));
+            let displayedData = orgsData.filter(org => org.name.toLowerCase().includes(query));
+            console.log(displayedData)
+            displayOrgs(displayedData);
+            
+            if (displayedData.length === 0) {
+                orgsListContainer.innerHTML = `
+                    <span class="empty-modal">
+                        No Organizations Found.
+                    </span>
+                `
+            }
 
         } catch (error) {
             console.error("Could not fetch organization data:", error);
             orgsListContainer.innerHTML = '<p style="color: red;">Failed to load organizations. Check the console for details.</p>';
         }
     });
+
+    document.querySelector(".close-icon").addEventListener("click", () => {
+        document.querySelector(".filter-list").classList.add("hidden");
+    })
 });

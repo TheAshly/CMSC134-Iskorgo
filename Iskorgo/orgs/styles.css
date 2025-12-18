@@ -165,17 +165,58 @@ header.org-header {
 
 .filter-list {
     position: absolute;
-    font-size: var(--fs-24);
-    font-weight: var(--fw-medium);
-    top: 50px;        
-    right: 1.5em;        
-    background-color: var(--color-secondary);
-    color: white;
-    padding: 10px var(--pad-x-default);
-    border-radius: 10px;
-    z-index: 999;         
-    display: block;
-    list-style: none;
+    top: 20px;
+    right: 0;
+    width: 20ch;
+    z-index: 2; 
+    display: flex;
+    padding: var(--pad-y-default) var(--pad-x-default);
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: var(--mar-default);
+        border-bottom: solid 1px var(--color-subtext);
+    }
+    header p {
+        font-size: var(--fs-18);
+        font-weight: var(--fw-medium);
+    }
+    header figure {
+        width: 28px;
+        height: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 2px black;
+        border-radius: 50%;
+        background-color: var(--color-secondary);
+        cursor: pointer;
+    }
+    header figure img {
+        width: 24px;
+        height: 24px;
+        filter: invert(1)
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    ul li {
+        display: flex;
+        justify-content: start;
+        font-size: var(--fs-16);
+        padding-block: var(--pad-y-large);
+        border-bottom: solid 1px var(--color-subtext);
+        
+    }
+
 }
 
 .filter-item {
@@ -233,7 +274,15 @@ header.org-header {
     font-size: 30px;
 }
 
-
+.empty-modal {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: var(--mar-default);
+    color: var(--color-subtext);
+    font-size: var(--fs-20);
+    font-family: var(--ff-body);
+}
 
  /* NAVBAR STYLES */
 footer {
