@@ -135,29 +135,32 @@ async function displayEvents(monthDisplay ) {
             const cell = calendarCells[index];
             let list = cell.querySelector('.event-list');   
             if (!list) {           
-                list = document.createElement('ul');
+                list = document.createElement('div');
                 list.classList.add('event-list');
                 cell.appendChild(list);
             }
-            const li = document.createElement('li');
-            li.classList.add('event-item');
-            li.textContent = event.what;
-            list.appendChild(li)
+            const img = document.createElement('img');
+            img.classList.add('event-item');
+            img.src = event.img;
+            img.width = "30";
+            img.height = "30";
+            list.appendChild(img)
         } else {
             let startIndex = monthDisplay.dayStart + start - 1;
             let startCell = calendarCells[startIndex];
             if (startCell) {
                 let list = startCell.querySelector('.event-list');
                 if (!list) {
-                    list = document.createElement('ul');
+                    list = document.createElement('div');
                     list.classList.add('event-list');
                     startCell.appendChild(list);
                 }
-                const liStart = document.createElement('li');
-                liStart.classList.add('event-item', 'event-start');
-                liStart.textContent = event.what;
-                liStart.setAttribute('title', event.what);
-                list.appendChild(liStart);
+                const img = document.createElement('img');
+                img.classList.add('event-item');
+                img.src = event.img;
+                img.width = "30";
+                img.height = "30";
+                list.appendChild(img)
             }
 
             let endIndex = monthDisplay.dayStart + end - 1;
@@ -165,15 +168,16 @@ async function displayEvents(monthDisplay ) {
             if (endCell) {
                 let list = endCell.querySelector('.event-list');
                 if (!list) {
-                    list = document.createElement('ul');
+                    list = document.createElement('div');
                     list.classList.add('event-list');
                     endCell.appendChild(list);
                 }
-                const liEnd = document.createElement('li');
-                liEnd.classList.add('event-item', 'event-end');
-                liEnd.textContent = event.what;
-                liEnd.setAttribute('title', event.what);
-                list.appendChild(liEnd);
+                const img = document.createElement('img');
+                img.classList.add('event-item');
+                img.src = event.img;
+                img.width = "30";
+                img.height = "30";
+                list.appendChild(img)
             }
         }
     }
@@ -250,6 +254,7 @@ async function createCalendarList(monthDisplay) {
         });
 
         if (dayEvents.length === 0) {
+            dayItem.classList.add("hidden")
             const noEventsMsg = document.createElement('p');
             noEventsMsg.classList.add("no-events");
             noEventsMsg.textContent = 'No Events on this Day';
