@@ -80,7 +80,7 @@ const logout = document.querySelector(".log-out");
 logout.addEventListener("click", () => {
     loginContainer.classList.remove("hidden");
     userContainer.classList.add("hidden");  
-    localStorage.setItem("State", null);    
+    localStorage.setItem("State", "logged-out");    
 })
 
 const loginWithFBBtn = document.querySelector(".login-using-fb");
@@ -101,6 +101,7 @@ function goToOldUser(e) {
     eventPost.classList.remove("hidden")
     noFollows.classList.add("hidden")
     followedOrgs.classList.remove("hidden") 
+    window.location.href="./../"
 }
 function goToNewUser(e) {
     e.preventDefault()
@@ -115,7 +116,8 @@ function goToNewUser(e) {
     noEvents.classList.remove("hidden")
     eventPost.classList.add("hidden")
     noFollows.classList.remove("hidden")
-    followedOrgs.classList.add("hidden") 
+    followedOrgs.classList.add("hidden")
+    window.location.href="./../" 
 }
 
 loginBtn.addEventListener("click", goToOldUser);
