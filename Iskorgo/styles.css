@@ -261,19 +261,50 @@ post {
     transform: translateX(-4.2%); 
     background-color: var(--color-followed);
     display: flex;
-    align-items: center;
-    justify-content: center;    
+    justify-content: left;       
     border: 2px solid black;
     padding: 0.2em;
     margin-bottom: 1em;
-    
 }
 
-.event-banner{
+.event-banner {
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column; /* Stacks the "EVENT" label on top of the container */
+    width: 100%;
     color: white;
     font-size: var(--fs-16);
     font-family: var(--ff-body);
-    font-weight: var(--fw-medium);
+}
+
+.banner-label {
+    /* Styles for the "EVENT" text itself */
+    font-weight: bold;
+    padding-bottom: 5px; 
+     text-align: center; 
+}
+
+
+/* --- Structure the INNER container --- */
+.event-container {
+    display: flex;          /* Makes children horizontal side-by-side */
+    justify-content: space-between; /* Pushes the two inner divs to opposite ends */
+    width: 100%;
+}
+
+/* --- Ensure the content inside the inner divs remains vertical --- */
+.event-info,
+.event-actions {
+    display: flex;
+    flex-direction: column; /* Stacks spans vertically */
+    gap: 5px;               /* Adds space between the vertical spans */
+    color
+}
+
+/* Optional: makes the spans within those divs block elements for consistency */
+.event-info span,
+.event-actions span {
+    display: block; 
 }
 
 .post-header {

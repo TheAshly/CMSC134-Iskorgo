@@ -82,9 +82,25 @@ async function main() {
                 const eventHeader = document.createElement('div');
                 eventHeader.classList.add('event-header');
 
-                const eventBanner = document.createElement('span');
+                const eventBanner = document.createElement('div');
                 eventBanner.classList.add('event-banner');
-                eventBanner.textContent = "EVENT";
+                eventBanner.innerHTML = `   
+                    <div class="banner-label">EVENT</div>
+                    <div class="event-container">
+                        <div class="event-info">
+                            <span>WHAT: Event_Name</span>
+                            <span>WHERE: Event_Loc</span>
+                            <span>WHEN: Event_Time</span>
+                            <span>WHO: People_Going</span>
+                        </div>
+                        <div class="event-actions">
+                            <span>Pin</span>
+                            <br>
+                            <span>Share</span>
+                        </div>
+                    </div>
+                
+                `;
                 eventHeader.appendChild(eventBanner);
                 newPost.appendChild(eventHeader);
             }
@@ -179,6 +195,9 @@ async function main() {
 
             if (post.postssrc.length > 1) {
                 const postPhotos = document.createElement('img');
+                postPhotos.classList.add('post-photo');
+                postPhotos.src = "." + encodeURI(post.postssrc[0]) ;
+                postPhotos.alt = `${orgData.name} photo`;
                 postDetails.appendChild(postPhotos);
             } else if (post.postssrc.length == 1) {
                 const postPhotos = document.createElement('img');
@@ -214,7 +233,7 @@ async function main() {
     });
     
     const searchBar = document.querySelector(".search-bar")
-    searchBar.addEventListener("input", e => {
+    searchBar.addEventListener("input", e => { 
         const query = searchBar.value.toLowerCase();    
         let results = []; 
         switch(following) {

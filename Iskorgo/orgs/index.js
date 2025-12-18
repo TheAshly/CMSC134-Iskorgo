@@ -1,3 +1,27 @@
+
+async function fetchPostsData() {
+        try {
+            const response = await fetch("../json/Posts.json");
+            if (!response.ok) {
+                throw new Error("Resource cannot be fetched.");
+            } 
+            const jsonData = await response.json();
+            return jsonData;
+        } 
+        catch(error) {
+            console.error(error);
+    }   
+}
+
+function truncateString(str, maxLength) {
+  
+  if (str.length > maxLength) {
+    return str.slice(0, maxLength) + '...';
+  } else {
+    return str;
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const JSON_PATH = '../json/OrgsList.json';
     const orgsListContainer = document.getElementById('orgs-list');
@@ -78,14 +102,176 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         card.appendChild(followStatus);
+        card.addEventListener('click', async () => {
 
+
+            const subCard = document.createElement('div');
+            subCard.classList.add('pop-out-org');
+
+            const subLogo = document.createElement('img');
+            subLogo.classList.add('org-logo');
+            subLogo.classList.add('pop-out');
+            subLogo.src = "." + org.img; // Use the image path from JSON
+            subLogo.alt = `${org.name} logo`;
+            subCard.appendChild(subLogo);
+
+            // 2. Info Container (Name and Tags)
+            const subInfo = document.createElement('div');
+            subInfo.classList.add('org-info');
+            subInfo.classList.add('pop-out');
+            
+            const subName = document.createElement('div');
+            subName.classList.add('org-name');
+            subName.classList.add('pop-out');
+            subName.textContent = org.name;
+            subInfo.appendChild(subName);
+
+            const subTagList = document.createElement('div');
+            subTagList.classList.add('tag-list');
+            subTagList.classList.add('pop-out');
+            
+            // Ensure tags is always an array for iteration
+            const subTags = Array.isArray(org.tag) ? org.tag : [org.tag];
+            subTags.forEach(tagText => {
+                const tag = document.createElement('span');
+                tag.classList.add('org-tag');
+                tag.classList.add('pop-out');
+                tag.textContent = tagText;
+                subTagList.appendChild(tag);
+            });
+            subInfo.appendChild(subTagList);
+            subCard.appendChild(subInfo);
+
+            // 3. Follow Status Button
+            const subFollowStatus = document.createElement('div');
+            subFollowStatus.classList.add('follow-status');
+            subFollowStatus.classList.add('pop-out');
+            // Set initial state based on 'followed' property
+            if (!org.followed) {
+                subFollowStatus.textContent = 'Followed';
+                subFollowStatus.classList.add('followed');
+            } else {
+                subFollowStatus.textContent = 'Follow';
+                subFollowStatus.classList.add('not-followed');
+            }
+
+            // Add click listener to toggle status
+            subFollowStatus.addEventListener('click', () => {
+                toggleFollowStatus(subFollowStatus);
+            });
+            toggleFollowStatus(subFollowStatus);
+            subCard.appendChild(subFollowStatus);
+            let body = document.querySelector(".main-body")
+
+
+            body.appendChild(subCard);
+
+            const orgPosts = document.createElement('div');
+            orgPosts.classList.add('org-posts');
+
+            const allPosts = await fetchPostsData();
+            const followedPosts = allPosts.filter(post => post.source_org == org.id);
+
+            orgPosts.innerText = "";   
+
+            if(followedPosts.length == 0){
+                orgPosts.innerHTML = `
+                <span class = "empty-modal">No Posts Were Found.</span>
+                `
+            }
+            followedPosts.forEach(post => {
+                const newPost = document.createElement('post');
+                const orgData = org;
+                
+                if(post.type == "event"){
+                    newPost.classList.add('event');
+                    const eventHeader = document.createElement('div');
+                    eventHeader.classList.add('event-header');
+
+                    const eventBanner = document.createElement('span');
+                    eventBanner.classList.add('event-banner');
+                    eventBanner.textContent = "EVENT";
+                    eventHeader.appendChild(eventBanner);
+                    newPost.appendChild(eventHeader);
+                }
+                let postDescription = ""
+                post.description.forEach(description => {
+                    postDescription = postDescription + description + "\n";
+                });
+
+                const postHeader = document.createElement('div');
+                postHeader.classList.add('post-header');
+
+                const postHeaderDetails = document.createElement('div');
+                postHeaderDetails.classList.add('post-header-details');
+
+                const postDate = document.createElement('span');
+                postDate.classList.add('post-date');
+                postDate.textContent = post.date;
+                postHeaderDetails.appendChild(postDate);
+
+                postHeader.appendChild(postHeaderDetails);
+                newPost.appendChild(postHeader);
+
+                const postDetails = document.createElement('div');
+
+                const postDescriptionBlock = document.createElement('span');
+                postDescriptionBlock.classList.add('post-description');
+                
+                const truncatedDescription = truncateString(postDescription, 200);
+                postDescriptionBlock.innerText = truncatedDescription;
+                postDetails.appendChild(postDescriptionBlock);
+                if(truncatedDescription != postDescription){
+                    const readMore = document.createElement('span');
+                    readMore.classList.add('see-more');
+                    readMore.innerText = "\nSee more";
+                    postDetails.appendChild(readMore);
+                    readMore.addEventListener('click', () => {
+
+                        if(readMore.classList.contains('less')){
+                            readMore.classList.remove('less');
+                            postDescriptionBlock.innerText = truncatedDescription
+                            readMore.innerText = "\nSee more";
+                        } else {
+                            readMore.classList.add('less');
+                            postDescriptionBlock.innerText = postDescription
+                            readMore.innerText = "\nSee less";
+                        }
+                        
+                        
+                    });
+                }
+
+
+                if (post.postssrc.length > 1) {
+                    const postPhotos = document.createElement('img');
+                    postPhotos.classList.add('post-photo');
+                    postPhotos.src = "." + encodeURI(post.postssrc[0]) ;
+                    postPhotos.alt = `${orgData.name} photo`;
+                    postDetails.appendChild(postPhotos);
+                } else if (post.postssrc.length == 1) {
+                    const postPhotos = document.createElement('img');
+                    postPhotos.classList.add('post-photo');
+                    postPhotos.src = "." + encodeURI(post.postssrc[0]) ;
+                    postPhotos.alt = `${orgData.name} photo`;
+                    postDetails.appendChild(postPhotos);
+                }
+
+                newPost.appendChild(postDetails);
+
+                orgPosts.append(newPost);
+            });
+            body.appendChild(orgPosts);
+
+
+        });
         return card;
     }
 
     /**
      * Fetches organization data and renders the list.
      */
-    async function fetchAndRenderOrgs() {
+    async function fetchAndRenderOrgs(c) {
         try {
             const response = await fetch(JSON_PATH);
             
@@ -97,17 +283,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Clear loading text
             orgsListContainer.innerHTML = ''; 
-
+            displayOrgs(orgsData);
             // Render each organization card
-            orgsData.forEach(org => {
-                const orgCard = createOrgCard(org);
-                orgsListContainer.appendChild(orgCard);
-            });
+
 
         } catch (error) {
             console.error("Could not fetch organization data:", error);
             orgsListContainer.innerHTML = '<p style="color: red;">Failed to load organizations. Check the console for details.</p>';
         }
+    }
+
+    function displayOrgs(list){
+            list.forEach(org => {
+                const orgCard = createOrgCard(org);
+                orgsListContainer.appendChild(orgCard);
+            });
     }
 
     // Initialize the application
@@ -225,6 +415,29 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.querySelector('.filter-list').classList.add('hidden');
                 });
             });
+        }
+    });
+
+    const searchBar = document.querySelector(".search-input")
+    searchBar.addEventListener("input", async e => {
+        const query = searchBar.value.toLowerCase();    
+        let results = [];     
+        try {
+            const response = await fetch(JSON_PATH);
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            const orgsData = await response.json();
+
+            // Clear loading text
+            orgsListContainer.innerHTML = ''; 
+            displayOrgs(orgsData.filter(org => org.name.toLowerCase().includes(query)));
+
+        } catch (error) {
+            console.error("Could not fetch organization data:", error);
+            orgsListContainer.innerHTML = '<p style="color: red;">Failed to load organizations. Check the console for details.</p>';
         }
     });
 });

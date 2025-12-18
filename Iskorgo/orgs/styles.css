@@ -364,3 +364,192 @@ footer img {
 .follow-status.followed {
     background-color: var(--color-primary);
 }
+
+
+
+.pop-out-org { 
+    position: absolute;
+    width: 101%;    
+    bottom: 0;
+    left: -2px; 
+    height: 80vh;
+    background-color: var(--color-body);  
+    z-index: 9;   
+    box-sizing: border-box;
+
+    border: 2px solid black;
+    border-top-left-radius: 15px;  
+    border-top-right-radius: 15px; 
+    display: flex;                   /* 1. Enable Flexbox on the container */
+    padding: 20px 10px;                 /* Optional: Add a little padding so images don't touch the screen edges */
+}
+
+.org-logo.pop-out {
+    display: flex; /* Ensures content is centered if it's an image tag */
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-header);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 15px;
+    background-color: #333; /* Placeholder background color */
+}
+
+.org-info.pop-out {
+    flex-grow: 1;
+}
+
+.org-name.pop-out {
+    padding-top: 0.5em;
+    font-size: var(--fs-30);
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-body);
+    color: var(--color-header);
+    margin-bottom: 5px;
+    display: block; /* Force name to take its own line */
+}
+
+.tag-list.pop-out {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    color: white;
+}
+
+.org-tag.pop-out {
+    border-radius: 25px;
+    background-color: var(--color-primary);
+    color: var(--color-tag-text);
+    padding: 4px 12px;
+    font-size: var(--fs-18);
+    font-weight: var(--fw-semi-bold);
+    font-family: var(--ff-body);
+    height: auto;
+    width: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.follow-status.pop-out  {
+    height: 28px;
+    padding: 0 8px;
+
+    white-space: nowrap; /* Prevents text wrap */
+    background-color: var(--color-secondary);
+    border: 2px solid black;
+    border-radius: 20px;
+    color: white;
+    font-size: var(--fs-20);
+    font-family: var(--ff-body);
+
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-top: 40px;
+}
+
+.org-posts {
+    position: absolute;
+    width: 101%;    
+    bottom: 0;
+    left: -2px; 
+    height: 65vh;
+    background-color: var(--color-body);
+    z-index: 9;   
+
+    overflow-y: auto; 
+    flex-grow: 1; 
+
+    border: 2px solid black;
+    display: flex;                   /* 1. Enable Flexbox on the container */
+    padding: 20px 10px;                 /* Optional: Add a little padding so images don't touch the screen edges */
+    padding-bottom: 70px;
+    display: flex;        /* Activates flexbox */
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center;    /* Centers the boxes within the main container (if they are narrower) */
+    gap: 1.5em;             /* Adds space between the boxes */
+
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+}
+
+main::-webkit-scrollbar {
+    display: none; /
+}
+
+post {
+    width: 100%; 
+    box-sizing: border-box; 
+    background-color: white;    
+
+    border: 2px solid black;
+    border-radius: 15px; 
+    padding: 1em; 
+}
+
+
+.event-header{
+    width: 109%;
+    transform: translateX(-4.2%); 
+    background-color: var(--color-followed);
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    border: 2px solid black;
+    padding: 0.2em;
+    margin-bottom: 1em;
+    
+}
+
+.event-banner{
+    color: white;
+    font-size: var(--fs-16);
+    font-family: var(--ff-body);
+    font-weight: var(--fw-medium);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between;    */
+    margin-bottom: 0.5em;
+}
+
+.post-header-details{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;    
+    padding-left: 0.5em;
+
+}
+
+.post-date{
+    color: var(--color-subtext);
+    font-size: var(--fs-16);
+    font-family: var(--ff-body);
+}
+.post-description{
+    font-size: var(--fs-16);
+    font-family: var(--ff-body);
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;    
+}
+.see-more{
+    color: #f26b41;
+    font-size: var(--fs-16);
+    font-family: var(--ff-body);
+    font-weight: var(--fw-semi-bold);
+}
+.post-photo{
+    width: 100%;
+    border: 2px solid var(--color-header); /* Black border */
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
