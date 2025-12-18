@@ -23,7 +23,7 @@ prevBtn.addEventListener('click', () => {
     if (index > 0) {
         index--;
         updateCalendar();
-        document.querySelector('#calendar-list').classList.add("hidden");
+        document.querySelector('#calendar-list-container').classList.add("hidden");
         currentViewedDate = null;
     }   
 });
@@ -31,7 +31,7 @@ nextBtn.addEventListener('click', () => {
     if (index < monthDisplays.length - 1) {
         index++;
         updateCalendar();
-        document.querySelector('#calendar-list').classList.add("hidden");
+        document.querySelector('#calendar-list-container').classList.add("hidden");
         currentViewedDate = null;
     }   
 });
@@ -84,13 +84,13 @@ async function createCalendar(monthDisplay) {
                 if (dayItem) {
                     if (currentViewedDate) {
                         if (currentViewedDate === dayItem) {
-                            document.querySelector('#calendar-list').classList.toggle("hidden");
+                            document.querySelector('#calendar-list-container').classList.toggle("hidden");
                         } else {
-                            document.querySelector('#calendar-list').classList.remove("hidden");
+                            document.querySelector('#calendar-list-container').classList.remove("hidden");
                         }
                         currentViewedDate.classList.remove("viewed-date");
                     } else {
-                        document.querySelector('#calendar-list').classList.remove("hidden");
+                        document.querySelector('#calendar-list-container').classList.remove("hidden");
                     }
                     currentViewedDate = dayItem;
                     dayItem.classList.add("viewed-date");   
@@ -335,7 +335,9 @@ async function loadOrgs() {
     }
 }
 
-
+document.querySelector(".close-icon").addEventListener("click", () => {
+    document.querySelector('#calendar-list-container').classList.add("hidden");
+})
 
 
 

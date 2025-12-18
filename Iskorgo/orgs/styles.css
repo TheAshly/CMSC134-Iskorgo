@@ -224,15 +224,16 @@ header.org-header {
     height: 45px;
     border: 2px solid var(--color-header); /* Black border */
     border-radius: 50%;
-    background-color: white; /* Creamy background */
+    background-color: var(--color-secondary); /* Creamy background */
     cursor: pointer;
 }
 
 .filter-icon .material-icons {
-    color: var(--color-primary); /* Green color for the icon inside the circle */
+    color: white; /* Green color for the icon inside the circle */
     font-size: 30px;
-    color: var(--color-secondary)
 }
+
+
 
  /* NAVBAR STYLES */
 footer {

@@ -259,20 +259,21 @@ async function main() {
             postDescriptionBlock.innerText = truncatedDescription;
             postDetails.appendChild(postDescriptionBlock);
             if(truncatedDescription != postDescription){
-                const readMore = document.createElement('span');
+                const readMore = document.createElement('p');
+                readMore.style.marginBlock  = '10px'
                 readMore.classList.add('see-more');
-                readMore.innerText = "\nSee more";
+                readMore.innerHTML= "\nSee more <i class='fa-solid fa-chevron-down'></i>";
                 postDetails.appendChild(readMore);
                 readMore.addEventListener('click', () => {
 
                     if(readMore.classList.contains('less')){
                         readMore.classList.remove('less');
                         postDescriptionBlock.innerText = truncatedDescription
-                        readMore.innerText = "\nSee more";
+                        readMore.innerHTML= "\nSee more <i class='fa-solid fa-chevron-down'></i>";
                     } else {
                         readMore.classList.add('less');
                         postDescriptionBlock.innerText = postDescription
-                        readMore.innerText = "\nSee less";
+                        readMore.innerHTML= "\nSee less <i class='fa-solid fa-chevron-up'></i>";
                     }
                     
                     

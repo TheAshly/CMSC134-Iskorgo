@@ -260,20 +260,48 @@ main {
     border-radius: 50%;
 }
 
-#calendar-list {
+#calendar-list-container {
     width: 100%;
-    overflow-y: auto;
     padding: var(--pad-y-large) 0;
     border-top: solid 2px black;
     background-color: var(--color-body);
     box-sizing: border-box;
-    
-    -ms-overflow-style: none;  
-    scrollbar-width: none; 
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: var(--mar-default);
+        padding-inline: var(--pad-x-default);
+        border-bottom: solid 1px var(--color-subtext);
+    }
+    header p {
+        font-size: var(--fs-18);
+        font-weight: var(--fw-medium);
+    }
+    header figure {
+        width: 28px;
+        height: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 2px black;
+        border-radius: 50%;
+        background-color: var(--color-secondary);
+        cursor: pointer;
+    }
+    header figure img {
+        width: 24px;
+        height: 24px;
+        filter: invert(1)
+    }
+
 }
 
-#calendar-list::-webkit-scrollbar {
-    display: none; /
+#calendar-list {
+    height: 300px;
+    padding-top: var(--pad-y-xlarge);
+    overflow-y: auto;
 }
 
 #calendar-list .day-item {
