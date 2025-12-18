@@ -473,8 +473,13 @@ main {
     margin-top: var(--mar-xlarge);
 }
 .new-user-section .events-attending-section .event-list{
-    height: 300px;
+    height: 500px;
     overflow-y: auto;
+    
+    .content-pic {
+        margin-top:var(--mar-default);
+        width: 100%;    
+    }
 }
 .new-user-section .events-attending-section  .event-list::-webkit-scrollbar {
     display: none;
@@ -661,6 +666,11 @@ button, input {
     border: solid 3px black;
     cursor: pointer;
     filter: invert(1);
+}
+
+.see-more {
+    color: var(--color-secondary);
+    font-weight: bold;
 }
 
  /* NAVBAR STYLES */
