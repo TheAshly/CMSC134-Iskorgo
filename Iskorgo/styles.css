@@ -114,8 +114,7 @@ html {
     align-items: center;      
 }
 body {
-    min-height: 100vh;        
-    max-height: 100vh;     
+    height: 99dvh;        
     aspect-ratio: 9 / 19.5;
     background-color: #000000;
     position: relative; 
@@ -224,9 +223,7 @@ body {
 }
  /* MAIN STYLES */
 main {
-    max-width: 50vh; 
     width: 100%;
-    min-height: 80vh;  
     background-color: var(--color-body);
     padding-top: 150px;
     padding-bottom: 80px;
@@ -458,8 +455,7 @@ footer img {
 .dark-overlay {
     display: none;
     position: absolute;
-    min-height: 100vh;        
-    max-height: 100vh;     
+    height: 99dvh;     
     aspect-ratio: 9 / 19.5;
     background-color: #0000006b;
     z-index: 11;

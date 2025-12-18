@@ -121,8 +121,7 @@ html {
     align-items: center;      
 }
 body {
-    min-height: 100vh;        
-    max-height: 100vh;     
+    height: 99dvh;        
     aspect-ratio: 9 / 19.5;
     background-color: #000000;
     position: relative; 
@@ -134,7 +133,7 @@ body {
 main {
     max-width: 50vh; 
     width: 100%;    
-    min-height: 100vh;  
+    height: 99dvh;  
     padding-bottom: 60px; 
     overflow-y: auto; 
     flex-grow: 1; 
