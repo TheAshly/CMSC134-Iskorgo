@@ -192,12 +192,12 @@ body {
     height: 45px;
     border: 2px solid var(--color-header); /* Black border */
     border-radius: 50%;
-    background-color: var(--color-secondary); /* Creamy background */
+    background-color: white; /* Creamy background */
     cursor: pointer;
 }
 
 .filter-icon .material-icons {
-    color: white; /* Green color for the icon inside the circle */
+    color: var(--color-secondary); /* Green color for the icon inside the circle */
     font-size: 30px;
 }
 
@@ -325,6 +325,19 @@ post {
     align-items: center;
     /* justify-content: space-between;    */
     margin-bottom: 0.5em;
+}
+
+.going-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;  
+    gap: 5px;                
+}
+.going-img {
+    width: 32px;
+    height: 32px;
+    gap: 1em;
+    border-radius: 50%;
 }
 
 .org-logo {
