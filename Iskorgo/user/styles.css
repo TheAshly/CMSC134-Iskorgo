@@ -385,6 +385,7 @@ main {
     top: 10px;
     left: 10px;
     cursor: pointer;
+    filter: invert(1)
 }
 .new-user-section .header {
     position: relative;
