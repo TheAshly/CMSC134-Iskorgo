@@ -12,6 +12,20 @@ async function fetchPostsData() {
     } 
 }
 
+async function fetchEventData() {
+    try {
+        const response = await fetch("json/EventContainer.json");
+        if (!response.ok) {
+            throw new Error("Resource cannot be fetched.");
+        } 
+        const jsonData = await response.json();
+        return jsonData;
+    } 
+    catch(error) {
+        console.error(error);
+    } 
+}
+
 async function fetchOrgData() {
     try {
         const response = await fetch("json/OrgsList.json");
@@ -45,6 +59,25 @@ function toggleFollowStatus(followElement) {
         followElement.textContent = 'Followed';
     }
 }
+function togglePinStatus(pinElement) {
+    const isPinned = pinElement.classList.contains('followed');
+
+    if (isPinned) {
+        pinElement.classList.remove('followed');;
+    } else {
+        pinElement.classList.add('followed');
+    }
+}
+
+const shareData = {
+  title: 'MDN Web Docs',
+  text: 'Learn web development on MDN!',
+  url: 'https://developer.mozilla.org',
+};
+
+async function share(data) {
+    await navigator.share(data);
+}
 
 async function main() {
 
@@ -58,6 +91,7 @@ async function main() {
     }
 
     const allPosts = await fetchPostsData();
+    const allEvents = await fetchEventData();
     const allOrgs = await fetchOrgData();
 
     const followedPosts = allPosts.filter(post => followed.includes(post.source_org));
@@ -75,6 +109,7 @@ async function main() {
         }
         postList.forEach(post => {
             const newPost = document.createElement('post');
+            const eventData = allEvents.find(event => event.source_post == post.id)
             const orgData = allOrgs.find(org => org.id == post.source_org)
             
             if(post.type == "event"){
@@ -85,24 +120,76 @@ async function main() {
                 const eventBanner = document.createElement('div');
                 eventBanner.classList.add('event-banner');
                 eventBanner.innerHTML = `   
-                    <div class="banner-label">EVENT</div>
-                    <div class="event-container">
-                        <div class="event-info">
-                            <span>WHAT: Event_Name</span>
-                            <span>WHERE: Event_Loc</span>
-                            <span>WHEN: Event_Time</span>
-                            <span>WHO: People_Going</span>
-                        </div>
-                        <div class="event-actions">
-                            <img class="pin-event" src="./images/clip.png" />
-                            <br>
-                            <span class="share-event">Share</span>
-                        </div>
-                    </div>
-                
+                    <div class="banner-label">EVENT</div> 
                 `;
+                const eventContainer = document.createElement('div');
+                eventContainer.classList.add('event-container');
+
+                const eventInfo = document.createElement('div');
+                eventInfo.classList.add('event-info');
+                eventInfo.innerHTML = `   
+                    <span>${eventData.what}</span>
+                    <span><line>${eventData.where}</line></span>
+                    <span><line>${eventData.when}</line></span>
+                    <span>WHO: People_Going</span>      
+                `;
+
+                const goingContainer = document.createElement('div');
+                goingContainer.classList.add('event-container');
+
+                eventContainer.appendChild(eventInfo)
+
+                const eventActions = document.createElement('div');
+                eventActions.classList.add('event-actions');
+
+                const pinEvent = document.createElement('div');
+                pinEvent.classList.add('pin-event');
+                pinEvent.innerHTML = `   
+                    <img src="./images/push-pin.png" />              
+                `;
+                pinEvent.addEventListener('click', () => {
+                    if(state == "logged-out"){
+                        modal.style.display = "block";
+                    } else {
+                        console.log("PINNED")
+                        togglePinStatus(pinEvent);
+                    }
+                    
+                });
+
+                eventActions.appendChild(pinEvent)
+                eventActions.appendChild(document.createElement('br'))
+
+                const shareEvent = document.createElement('div');
+                shareEvent.classList.add('share-event');
+                shareEvent.innerHTML = `   
+                    <img src="./images/share.png" />            
+                `;
+                shareEvent.addEventListener('click', () => {
+    
+                    if(state == "logged-out"){
+                        modal.style.display = "block";
+                    } else {
+                        try {
+                            share(shareData)
+                        } catch (err) {
+                            console.log(err)
+                        }
+                    }
+                    
+                });
+
+                eventActions.appendChild(shareEvent)
+                eventContainer.appendChild(eventActions)
+                eventBanner.appendChild(eventContainer)
+
+
+
+
+
                 eventHeader.appendChild(eventBanner);
                 newPost.appendChild(eventHeader);
+                
             }
             let postDescription = ""
             post.description.forEach(description => {
@@ -208,7 +295,6 @@ async function main() {
             }
 
             newPost.appendChild(postDetails);
-
             mainContainer.append(newPost);
         });
     }
