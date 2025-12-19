@@ -162,19 +162,21 @@ async function main() {
                     <span><line>${eventData.when}</line></span>   
                     <span><line>${eventData.where}</line></span>
                 `;
+                if(state != "logged-out"){
+                    const goingContainer = document.createElement('div');
 
-                const goingContainer = document.createElement('div');
-                goingContainer.classList.add('going-container');
-                goingContainer.innerHTML = `   
-                    <span><line>Going:</line></span>      
-                `;
-                eventData.going.forEach(going => {
-                    const goingImage = document.createElement('img');
-                    goingImage.classList.add('going-img');
-                    goingImage.src = going
-                    goingContainer.appendChild(goingImage)   
-                });
-                eventInfo.appendChild(goingContainer)   
+                    goingContainer.classList.add('going-container');
+                    goingContainer.innerHTML = `   
+                        <span><line>Going:</line></span>      
+                    `;
+                    eventData.going.forEach(going => {
+                        const goingImage = document.createElement('img');
+                        goingImage.classList.add('going-img');
+                        goingImage.src = going
+                        goingContainer.appendChild(goingImage)   
+                    });
+                    eventInfo.appendChild(goingContainer) 
+                }
                 eventContainer.appendChild(eventInfo)
 
                 const eventActions = document.createElement('div');
