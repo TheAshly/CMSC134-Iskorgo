@@ -11,25 +11,6 @@
     <header></header>   <!-- Header Components (Components found at the top of the Phone) -->
     <main>
         <!--- There are sections here which can be hidden or not depending on the state-->
-        <section class="notification-modal hidden">
-            <header>
-                <p>Notifications</p>
-                <figure class="close-icon">
-                    <img src="./../images/close.png"/>
-                </figure>
-            </header>
-            <div class="no-notif hidden">No Events Currently</div>
-            <div class="notifs">
-                <div class="notif">
-                    <img width="50" height="50" src="./../images/OrgLogo/UPV Elektrons.jpg">
-                    <div class="header-info">
-                        <div class="title">UPV Statistical Society</div>
-                        <div class="subtitle-1">October 7, at 8:40 PM</div>
-                        <div class="subtitle-2">Upcoming in 1 day</div>      
-                    </div>
-                </div> 
-            </div>
-        </section>
         <section class="login-section-container hidden">
             <div class="login-section">
                 <div class="header">
@@ -89,7 +70,31 @@
         </section>
 
         <section class="new-user-section-container">
+            <section class="notification-modal hidden">
+                <header>
+                    <p>Notifications</p>
+                    <figure class="close-icon">
+                        <img src="./../images/close.png"/>
+                    </figure>
+                </header>
+                <div class="no-notif">
+                    <p>No Events Currently</p>
+                    <div class="help">To get notified to an event, press the <img src="./../images/notif.png"> at the "Events Attending" section below to get the notifications.</div>
+                </div>
+                <div class="notifs hidden">
+                    <div class="notif">
+                        <img width="50" height="50" src="./../images/OrgLogo/UPV Elektrons.jpg">
+                        <div class="header-info">
+                            <div class="title">UPV Elektrons</div>
+                            <div class="subtitle-1">October 8</div>
+                            <div class="subtitle-2">Upcoming tomorrow</div>      
+                        </div>
+                    </div> 
+                </div>
+            </section>
+        
             <div class="notifications">
+                <div class="orange-button hidden"></div>
                 <img width="32" height="32" src="./../images/bell-2.png">
             </div>
 
@@ -148,8 +153,9 @@
                     </div>
                     <div class="events-attending-section">
                         <h3>Events Attending</h3>
-                        <p class="no-events hidden">Currently no events attending.</p>
                         <div class="event-list">
+                            <div class="no-events hidden">Currently no events attending.</div>
+                    
                             <div class="event-post">
                                 <div class="post-header">
                                     <img width="50" height="50" src="./../images/OrgLogo/UPV Elektrons.jpg">
@@ -197,7 +203,7 @@
                                 </div>    
                                 <figcaption>
                                     <div class="achievement-name">Successfully Signed Up</div>
-                                    <div class="achievement-date-done">17/10/2025</div>
+                                    <div class="achievement-date-done">October 7, 2025</div>
                                 </figcaption>
                             </figure>
                             <figure class="achievement locked">

@@ -131,7 +131,6 @@ body {
 }
 
 main {
-    max-width: 50vh; 
     width: 100%;    
     height: 99dvh;  
     padding-bottom: 60px; 
@@ -259,7 +258,7 @@ main {
 .signup-section-container, 
 .new-user-section-container,
 .achievement-section-container {
-    height: calc(100vh - 60px); /* Full viewport height minus navbar height */
+    height: calc(99dvh - 60px); /* Full viewport height minus navbar height */
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -428,6 +427,32 @@ main {
     border: solid 3px white;
     background-color: var(--color-body);
 }
+.notifications .orange-button {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+}
+.new-user-section-container .no-notif {
+    padding: var(--pad-y-default) 0;
+    color: var(--color-subtext);
+    font-size: var(--fs-16);
+
+    .help {
+        font-size: var(--fs-14);
+        margin: var(--mar-default) 0;
+        line-height: 140%;
+    }
+
+    img {
+        height: 16px;
+        filter: invert(1) brightness(0.4);
+    }
+}
+
 .new-user-section .header .achievements {
     width: 100%;
     justify-content: left;
@@ -503,7 +528,11 @@ main {
     color: var(--color-subtext);
     font-size: var(--fs-16);
 }
-
+.new-user-section .no-events {
+    padding: var(--pad-y-large) var(--pad-x-small);
+    color: var(--color-subtext);
+    font-size: var(--fs-16);
+}   
 .new-user-section .event-post {
     width: 90%;
     background-color: white;
@@ -511,7 +540,7 @@ main {
     border: solid 2px var(--color-header);
     border-radius: 10px;
     margin: var(--mar-default) auto;
-    
+
 } 
 
 

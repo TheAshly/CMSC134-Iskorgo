@@ -134,14 +134,24 @@ signUpBtn.addEventListener("click", goToNewUser);
 document.querySelectorAll(".delete-event").forEach( btn => {
     btn.addEventListener("click", () => {   
         btn.closest(".event-post").classList.add("hidden");
+        document.querySelector(".orange-button").classList.add("hidden");
+        document.querySelector(".no-notif").classList.remove("hidden");
+        document.querySelector(".notifs").classList.add("hidden");
+        document.querySelector(".event-post").classList.add("hidden");
+        document.querySelector(".no-events").classList.remove("hidden");        
     })  
 })
 
 document.querySelectorAll(".notif-event").forEach( btn => {
     btn.addEventListener("click", () => {   
         btn.classList.toggle("followed");
+        document.querySelector(".orange-button").classList.toggle("hidden");
+        document.querySelector(".no-notif").classList.toggle("hidden");
+        document.querySelector(".notifs").classList.toggle("hidden");
     })  
 })
+
+
 
 
 
@@ -151,8 +161,10 @@ const notifications = document.querySelector(".notification-modal");
 
 notifIcon.addEventListener("click", () => {
     notifications.classList.toggle("hidden");
+
 }) 
 closeNotifIcon.addEventListener("click", () => {
     notifications.classList.toggle("hidden");
 }) 
+
 

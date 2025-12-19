@@ -106,8 +106,8 @@ async function createCalendar(monthDisplay) {
             cell.classList.add('disabled'); 
         }
 
-        if (new Date().getDay() === (i - monthDisplay.dayStart + 1) &&
-            new Date().getMonth() === new Date(`${monthDisplay.month} 1, ${monthDisplay.year}`).getMonth() &&
+        if (7 === (i - monthDisplay.dayStart + 1) &&
+            9 === new Date(`${monthDisplay.month} 1, ${monthDisplay.year}`).getMonth() &&
             new Date().getFullYear() === monthDisplay.year) {
             cell.id = 'current-day';
         }
