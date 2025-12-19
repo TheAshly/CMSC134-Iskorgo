@@ -121,7 +121,7 @@ html {
     align-items: center;      
 }
 body {
-    height: 99dvh;        
+    height: 100dvh;        
     aspect-ratio: 9 / 19.5;
     background-color: #000000;
     position: relative; 
@@ -132,7 +132,7 @@ body {
 
 main {
     width: 100%;    
-    height: 99dvh;  
+    height: 100dvh;  
     padding-bottom: 60px; 
     overflow-y: auto; 
     flex-grow: 1; 
@@ -489,19 +489,20 @@ main {
     top: -70px;
 }
 .new-user-section .followed-organizations img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin: var(--mar-small) var(--mar-xxsmall);
     border-radius: 50%;       
 }
 .new-user-section .events-attending-section {
-    margin-top: var(--mar-xlarge);
+    margin-top: var(--mar-default);
 }
 .new-user-section .events-attending-section .event-list{
-    height: 500px;
+    height: 400px;
     overflow-y: auto;
     border-radius: 10px;
     background-color: var(--color-body);
+    margin-top: var(--mar-xxsmall);
 
     .content-pic {
         margin-top:var(--mar-default);
@@ -520,7 +521,7 @@ main {
 
 .new-user-section .organizations-following-section h3,
 .new-user-section .events-attending-section h3 {
-    font-size: var(--fs-24);
+    font-size: var(--fs-20);
     font-weight: var(--fw-medium);
 }
 .new-user-section .organizations-following-section p, 

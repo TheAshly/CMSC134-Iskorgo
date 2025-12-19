@@ -114,7 +114,7 @@ html {
     align-items: center;      
 }
 body {
-    height: 99dvh;        
+    height: 100dvh;        
     aspect-ratio: 9 / 19.5;
     background-color: #000000;
     position: relative; 
